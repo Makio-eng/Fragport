@@ -48,7 +48,7 @@
                                         <a class="dropdown-item" href="{{ route('user.logout') }}"
                                             onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('messages.Logout') }}
+                                            {{ __('Logout') }}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
@@ -66,25 +66,6 @@
                         </a>
                 </div>
             </div>
-        </div>
-        <div class="row nav-contents row justify-content-center">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Mypage</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Information</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Brand List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Contact</a>
-                </li>
-            </ul>
         </div>
 
     </header>

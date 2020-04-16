@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: blue;
+                color: yellow;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: yellow;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -60,6 +60,11 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+            
+            .movie {
+                padding: 20px;
+                margin-top:30px;
             }
         </style>
     </head>
@@ -94,9 +99,11 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <div dlass="movie row">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item p-5" width="560" height="315" src="https://www.youtube.com/embed/kc-b1tw11SE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
+                </div>
                 </div>
         </div>
     </body>

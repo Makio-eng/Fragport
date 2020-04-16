@@ -1,0 +1,75 @@
+$main-color: #DF93E5;
+$sub-color: #808080;
+$main-font: 'Noto Serif JP', sans-serif;
+
+.header {
+    .jumbotron-fluid {
+        background-color: $sub-color;
+    }
+    .nav-item {
+        color: White;
+        font-family: $main-font;
+        margin: 0;
+        padding: 0;
+        display:block;
+        text-align: right;
+        font-size: 24px
+    }
+    .navbar-brand {
+        font-size: 70px;
+        color: $main-color;
+        font-family: Palatino;
+        margin:0 auto;
+        padding: 0px;
+        display: block;
+
+        &:hover {
+            color:$main-color;
+                }
+
+    }
+    .nav-contents {
+        .nav-item {
+            font-family: $main-font;
+            font-size: 24px
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: $sub-color;
+    text-align: center;
+    .jumbotron-fluid {
+        background-color: $sub-color;
+    }
+    .container {
+        margin-bottom: 10px;
+    }
+    .sns-link {
+        padding-top: 20px;
+            a {
+                font-size: 20px;
+                color: white;
+                font-family: $main-font;
+                padding-top: 4px;
+            }
+            i {
+                color: white;
+                margin-right: 1px;
+            }
+    }
+    .privacy {
+        color: white;
+    }
+    .disclimer {
+        color: white;
+    }
+    small {
+        color: white;
+        font-family: $main-font;
+        text-align: center;
+    }
+}

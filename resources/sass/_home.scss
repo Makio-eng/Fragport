@@ -1,0 +1,19 @@
+@mixin contents {
+    font-family: palatino;
+    color: black;
+    font-size: 29px;
+}
+
+
+.contents-logo{
+    @include contents;
+    text-align: center;
+    margin-top: 10px;
+}
+.more {
+        font-family: palatino;
+        color: black;
+        text-align: right;
+        font-size: 23px;
+        margin-right: 5px;
+}
