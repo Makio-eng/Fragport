@@ -1,5 +1,5 @@
 @mixin contents {
-    font-family: palatino;
+    font-family: $main-font;
     color: black;
     font-size: 29px;
 }
@@ -11,9 +11,14 @@
     margin-top: 10px;
 }
 .more {
-        font-family: palatino;
+        font-family: $main-font;
         color: black;
         text-align: right;
         font-size: 23px;
         margin-right: 5px;
+        display :block;
+        &:hover {
+            text-decoration: none;
+            color: darken($main-color,5%);
+        }
 }

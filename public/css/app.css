@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Noto+Serif+JP);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Noto+Serif+JP);*:focus {
+  outline: none !important;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+/*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -16950,9 +16958,8 @@ readers do not read off random characters that represent icons */
   font-family: "Noto Serif JP", sans-serif;
   margin: 0;
   padding: 0;
-  display: block;
-  text-align: right;
-  font-size: 24px;
+  font-size: 18px;
+  display: inline;
 }
 
 .header .navbar-brand {
@@ -16971,6 +16978,21 @@ readers do not read off random characters that represent icons */
 .header .nav-contents .nav-item {
   font-family: "Noto Serif JP", sans-serif;
   font-size: 24px;
+}
+
+.header .btn {
+  border-color: #DF93E5;
+  color: #DF93E5;
+}
+
+.header .btn:hover {
+  color: white;
+  background-color: #ebbcef;
+  border-color: #ebbcef;
+}
+
+.header .btn:hover:active {
+  outline: none;
 }
 
 .footer {
@@ -17020,7 +17042,7 @@ readers do not read off random characters that represent icons */
 }
 
 .contents-logo {
-  font-family: palatino;
+  font-family: "Noto Serif JP", sans-serif;
   color: black;
   font-size: 29px;
   text-align: center;
@@ -17028,14 +17050,83 @@ readers do not read off random characters that represent icons */
 }
 
 .more {
-  font-family: palatino;
+  font-family: "Noto Serif JP", sans-serif;
   color: black;
   text-align: right;
   font-size: 23px;
   margin-right: 5px;
+  display: block;
+}
+
+.more:hover {
+  text-decoration: none;
+  color: #d97ee0;
+}
+
+.card-header {
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 .form-group {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.information-logo {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 58px;
+}
+
+.information .information-title {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 27px;
+}
+
+.information .information-contents {
+  font-size: 19px;
+}
+
+.pagination-area .page-link {
+  color: #d97ee0;
+}
+
+.pagination-area .disabled {
+  color: #808080;
+}
+
+.about {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.about .about-title {
+  font-size: 56px;
+}
+
+.brandlist-title {
+  font-size: 56px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.brand-list {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.brand-list .card-body {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.brand-list .btn-link {
+  color: black;
+  display: block;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.brand-list .btn-link:hover {
+  text-decoration: none;
+}
+
+.brand-list p {
+  font-size: 14px;
   font-family: "Noto Serif JP", sans-serif;
 }
 

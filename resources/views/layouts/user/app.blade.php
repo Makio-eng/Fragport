@@ -25,7 +25,7 @@
     <header class="header">
         <div class="jumbotron-fluid">
             <div class="container">
-                <div class="auth-menu row d-flex-inline justify-content-end">
+                <div class="auth-menu row d-flex justify-content-end">
                     <nav class="navbar">
                         <ul class="navbar-nav">
                             <!-- Authentication Links -->
@@ -61,7 +61,7 @@
                     </nav>
                 </div>
                     <div class="row app-logo">
-                        <a class="navbar-brand" href="{{ url('/') }}">
+                        <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Fragport') }}
                         </a>
                 </div>
@@ -73,18 +73,22 @@
                     <a class="nav-link text-dark" href="#">Mypage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">About</a>
+                    <a class="nav-link text-dark" href="{{ url('/about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Information</a>
+                    <a class="nav-link text-dark" href="{{ url('/information') }}">Information</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Brand List</a>
+                    <a class="nav-link text-dark" href="{{ url('/brand') }}">Brand List</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="#">Contact</a>
                 </li>
             </ul>
+            <form class="form-inline ml-2">
+                <input class="form-control mr-sm-2 border-secondary" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
 
     </header>

@@ -25,7 +25,7 @@
     <header class="header">
         <div class="jumbotron-fluid">
             <div class="container">
-                <div class="auth-menu row d-flex-inline justify-content-end">
+                <div class="auth-menu row d-flex- justify-content-end">
                     <nav class="navbar">
                         <ul class="navbar-nav">
                             <!-- Authentication Links -->
@@ -61,7 +61,7 @@
                     </nav>
                 </div>
                     <div class="row app-logo">
-                        <a class="navbar-brand" href="{{ url('/') }}">
+                        <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Fragport') }}
                         </a>
                 </div>

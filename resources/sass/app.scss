@@ -1,3 +1,10 @@
+*:focus {
+    outline: none !important;
+}
+*:focus {
+    box-shadow:none !important;
+}
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
@@ -23,3 +30,12 @@
 
 //認証画面
 @import 'auth';
+
+//インフォメーション画面
+@import 'information';
+
+//about画面
+@import 'about';
+
+//ブランドリスト画面
+@import 'brandlist';

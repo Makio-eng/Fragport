@@ -9,7 +9,7 @@
     <div class="contents">
 
     </div>
-    <p class="more">And more</p>
+    <a class="more" href="{{ url('/information') }}">And more</a>
 </div>
 
 <div class="new-post container my-5 border border-secondary shadow">
@@ -41,7 +41,7 @@
         <div class="box2 col-1 bg-secondary"></div>
         </div>
     </div>
-    <p class="more">And more</p>
+    <a class="more" href="{{ url('/brand') }}">And more</a>
 </div>
 
 @endsection

@@ -11,9 +11,8 @@ $main-font: 'Noto Serif JP', sans-serif;
         font-family: $main-font;
         margin: 0;
         padding: 0;
-        display:block;
-        text-align: right;
-        font-size: 24px
+        font-size: 18px;
+        display: inline;
     }
     .navbar-brand {
         font-size: 70px;
@@ -31,7 +30,19 @@ $main-font: 'Noto Serif JP', sans-serif;
     .nav-contents {
         .nav-item {
             font-family: $main-font;
-            font-size: 24px
+            font-size: 24px;
+        }
+    }
+    .btn {
+        border-color: $main-color;
+        color: $main-color;
+        &:hover {
+            color: white;
+            background-color: lighten($main-color, 10%);
+            border-color: lighten($main-color, 10%);
+        &:active {
+            outline:none;
+        }
         }
     }
 }

@@ -1,0 +1,25 @@
+$main-color: #DF93E5;
+$sub-color: #808080;
+$main-font: 'Noto Serif JP', sans-serif;
+
+.information-logo {
+    font-family: $main-font;
+    font-size: 58px;
+}
+.information {
+    .information-title {
+        font-family: $main-font;
+        font-size: 27px;
+    }
+    .information-contents {
+        font-size: 19px;
+    }
+}
+.pagination-area {
+    .page-link {
+        color: darken($main-color,5%);
+    }
+    .disabled {
+        color: $sub-color;
+    }
+}

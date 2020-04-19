@@ -13,7 +13,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
     // ログイン認証後
     Route::middleware('auth:user')->group(function () {
 
-        // TOPページ
+        //TOPページ
         Route::resource('home', 'HomeController', ['only' => 'index']);
 
     });
@@ -45,7 +45,12 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::view('/home','home');
 Route::get('tests/test', 'TestController@index');
+Route::view('/information','information');
+Route::view('/about','about');
+Route::view('/brand','brand/index');
+

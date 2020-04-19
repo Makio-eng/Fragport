@@ -1,0 +1,27 @@
+.brandlist-title {
+  font-size: 56px;
+  font-family: $main-font;
+}
+
+.brand-list {
+  font-family: $main-font;
+  .card-body {
+    font-family: $main-font;
+  }
+  .btn-link {
+    color: black;
+    display: block;
+    font-size: 28px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  p {
+    font-size: 14px;
+    font-family: $main-font;
+  }
+}
+
+
+
