@@ -1,0 +1,86 @@
+//レビュー一覧
+.perfumeindex-header {
+    .perfume-name {
+        p {
+            height: 40px;
+            font-family: $main-font;
+            font-size: 35px;
+        }
+    }
+    .perfume {
+        p {
+            font-family: $main-font;
+            font-size: 20px;
+        }
+    }
+    .cp_hr06 {
+        position: relative;
+        height: 3px;
+        border-width: 0;
+        background-image: -webkit-linear-gradient(
+            left,
+            transparent 0%,
+            #283593 50%,
+            transparent 100%
+        );
+        background-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            #283593 50%,
+            transparent 100%
+        );
+    }
+}
+
+.review-list {
+    h1 {
+        font-family: $main-font;
+        font-size: 40px;
+    }
+    .bi {
+        font-size: 40px;
+        color: $main-color;
+        &:hover {
+            color: darken($main-color, 15%);
+        }
+    }
+}
+
+//レビュー投稿
+.review-create {
+    font-family: $main-font;
+    .review-create-title {
+        @include title-font;
+    }
+
+    .review-form {
+        .user-image {
+            border-radius: 50%;
+            width: 140px;
+            border: 2px;
+            border-color: $sub-color;
+        }
+        .user-name {
+            font-size: 30px;
+        }
+        .review-body {
+            textarea {
+                resize: none;
+                font-size: 25px;
+            }
+        }
+    }
+    .btn {
+        border-color: $main-color;
+        color: $main-color;
+        &:hover {
+            color: white;
+            background-color: lighten($main-color, 10%);
+            border-color: lighten($main-color, 10%);
+            &:active {
+                outline: none;
+                background-color: $main-color;
+            }
+        }
+    }
+}

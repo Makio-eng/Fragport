@@ -16949,40 +16949,32 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-.header .jumbotron-fluid {
-  background-color: #808080;
+.header {
+  font-family: "Noto Serif JP", sans-serif;
+  height: 130px;
 }
 
-.header .nav-item {
-  color: White;
-  font-family: "Noto Serif JP", sans-serif;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  display: inline;
+.header .jumbotron-fluid {
+  background-color: #989797;
 }
 
 .header .navbar-brand {
-  font-size: 70px;
-  color: #DF93E5;
   font-family: Palatino;
-  margin: 0 auto;
-  padding: 0px;
-  display: block;
+  font-size: 60px;
+  color: #df93e5;
 }
 
 .header .navbar-brand:hover {
-  color: #DF93E5;
+  color: #df93e5;
 }
 
-.header .nav-contents .nav-item {
-  font-family: "Noto Serif JP", sans-serif;
-  font-size: 24px;
+.header .nav-item {
+  font-size: 20px;
 }
 
 .header .btn {
-  border-color: #DF93E5;
-  color: #DF93E5;
+  border-color: #df93e5;
+  color: #df93e5;
 }
 
 .header .btn:hover {
@@ -16993,18 +16985,19 @@ readers do not read off random characters that represent icons */
 
 .header .btn:hover:active {
   outline: none;
+  background-color: #df93e5;
 }
 
 .footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #808080;
+  background-color: #989797;
   text-align: center;
 }
 
 .footer .jumbotron-fluid {
-  background-color: #808080;
+  background-color: #989797;
 }
 
 .footer .container {
@@ -17041,12 +17034,17 @@ readers do not read off random characters that represent icons */
   text-align: center;
 }
 
+.information {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 20px;
+}
+
 .contents-logo {
   font-family: "Noto Serif JP", sans-serif;
   color: black;
   font-size: 29px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .more {
@@ -17054,13 +17052,16 @@ readers do not read off random characters that represent icons */
   color: black;
   text-align: right;
   font-size: 23px;
-  margin-right: 5px;
-  display: block;
 }
 
 .more:hover {
   text-decoration: none;
   color: #d97ee0;
+}
+
+.brandlist .brand p {
+  font-size: 14px;
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 .card-header {
@@ -17073,7 +17074,8 @@ readers do not read off random characters that represent icons */
 
 .information-logo {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 58px;
+  font-size: 36px;
+  color: black;
 }
 
 .information .information-title {
@@ -17093,21 +17095,24 @@ readers do not read off random characters that represent icons */
   color: #808080;
 }
 
-.about {
-  font-family: "Noto Serif JP", sans-serif;
-}
-
 .about .about-title {
-  font-size: 56px;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 36px;
+  color: black;
 }
 
 .brandlist-title {
-  font-size: 56px;
   font-family: "Noto Serif JP", sans-serif;
+  font-size: 36px;
+  color: black;
 }
 
 .brand-list {
   font-family: "Noto Serif JP", sans-serif;
+}
+
+.brand-list .card-header {
+  background-image: url(/strage/cardlogobg.jpg);
 }
 
 .brand-list .card-body {
@@ -17116,8 +17121,7 @@ readers do not read off random characters that represent icons */
 
 .brand-list .btn-link {
   color: black;
-  display: block;
-  font-size: 28px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -17125,8 +17129,116 @@ readers do not read off random characters that represent icons */
   text-decoration: none;
 }
 
-.brand-list p {
+.brand-list .brand p {
   font-size: 14px;
   font-family: "Noto Serif JP", sans-serif;
+}
+
+.brand-info p {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 20px;
+}
+
+.brand-info h2 {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.brand-info hr {
+  height: 6px;
+  background: linear-gradient(to right, white, gray);
+  background: linear-gradient(to left, gray, white);
+  border: none;
+}
+
+.brand-info .cp_hr06 {
+  position: relative;
+  height: 3px;
+  border-width: 0;
+  background-image: linear-gradient(90deg, transparent 0%, #283593 50%, transparent 100%);
+}
+
+.brand-products .perfumelist-title h1 {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 36px;
+  color: black;
+}
+
+.brand-products .perfumes p {
+  font-size: 14px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.perfumeindex-header .perfume-name p {
+  height: 40px;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 35px;
+}
+
+.perfumeindex-header .perfume p {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 20px;
+}
+
+.perfumeindex-header .cp_hr06 {
+  position: relative;
+  height: 3px;
+  border-width: 0;
+  background-image: linear-gradient(90deg, transparent 0%, #283593 50%, transparent 100%);
+}
+
+.review-list h1 {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 40px;
+}
+
+.review-list .bi {
+  font-size: 40px;
+  color: #DF93E5;
+}
+
+.review-list .bi:hover {
+  color: #cd55d6;
+}
+
+.review-create {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-create .review-create-title {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 36px;
+  color: black;
+}
+
+.review-create .review-form .user-image {
+  border-radius: 50%;
+  width: 140px;
+  border: 2px;
+  border-color: #808080;
+}
+
+.review-create .review-form .user-name {
+  font-size: 40px;
+}
+
+.review-create .review-form .review-body textarea {
+  resize: none;
+  font-size: 25px;
+}
+
+.review-create .btn {
+  border-color: #DF93E5;
+  color: #DF93E5;
+}
+
+.review-create .btn:hover {
+  color: white;
+  background-color: #ebbcef;
+  border-color: #ebbcef;
+}
+
+.review-create .btn:hover:active {
+  outline: none;
+  background-color: #DF93E5;
 }
 

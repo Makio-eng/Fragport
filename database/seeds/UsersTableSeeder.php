@@ -12,9 +12,9 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name'              => 'user',
+            'name'              => 'ルカリオ',
             'email'             => 'user@example.com',
-            'password'          => Hash::make('12345678'),
+            'password'          => Hash::make(12341234),
             'remember_token'    => Str::random(10),
         ]);
     }

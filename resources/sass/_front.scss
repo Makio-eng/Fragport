@@ -1,37 +1,28 @@
-$main-color: #DF93E5;
-$sub-color: #808080;
-$main-font: 'Noto Serif JP', sans-serif;
+$main-color: #df93e5;
+$sub-color: #989797;
+$main-font: "Noto Serif JP", sans-serif;
+@mixin title-font {
+    font-family: $main-font;
+    font-size: 36px;
+    color: black;
+}
 
 .header {
+    font-family: $main-font;
+    height: 130px;
     .jumbotron-fluid {
         background-color: $sub-color;
     }
-    .nav-item {
-        color: White;
-        font-family: $main-font;
-        margin: 0;
-        padding: 0;
-        font-size: 18px;
-        display: inline;
-    }
     .navbar-brand {
-        font-size: 70px;
-        color: $main-color;
         font-family: Palatino;
-        margin:0 auto;
-        padding: 0px;
-        display: block;
-
+        font-size: 60px;
+        color: $main-color;
         &:hover {
-            color:$main-color;
-                }
-
-    }
-    .nav-contents {
-        .nav-item {
-            font-family: $main-font;
-            font-size: 24px;
+            color: $main-color;
         }
+    }
+    .nav-item {
+        font-size: 20px;
     }
     .btn {
         border-color: $main-color;
@@ -40,9 +31,10 @@ $main-font: 'Noto Serif JP', sans-serif;
             color: white;
             background-color: lighten($main-color, 10%);
             border-color: lighten($main-color, 10%);
-        &:active {
-            outline:none;
-        }
+            &:active {
+                outline: none;
+                background-color: $main-color;
+            }
         }
     }
 }
@@ -61,16 +53,16 @@ $main-font: 'Noto Serif JP', sans-serif;
     }
     .sns-link {
         padding-top: 20px;
-            a {
-                font-size: 20px;
-                color: white;
-                font-family: $main-font;
-                padding-top: 4px;
-            }
-            i {
-                color: white;
-                margin-right: 1px;
-            }
+        a {
+            font-size: 20px;
+            color: white;
+            font-family: $main-font;
+            padding-top: 4px;
+        }
+        i {
+            color: white;
+            margin-right: 1px;
+        }
     }
     .privacy {
         color: white;

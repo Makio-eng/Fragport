@@ -1,7 +1,6 @@
 .about{
-    font-family: $main-font;
     .about-title {
-        font-size: 56px;
+        @include title-font;
     }
     
 }

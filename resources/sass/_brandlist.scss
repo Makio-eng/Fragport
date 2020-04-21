@@ -1,27 +1,76 @@
+//brand-index
 .brandlist-title {
-  font-size: 56px;
-  font-family: $main-font;
+    @include title-font;
 }
 
 .brand-list {
-  font-family: $main-font;
-  .card-body {
     font-family: $main-font;
-  }
-  .btn-link {
-    color: black;
-    display: block;
-    font-size: 28px;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
+    .card-header {
+        background-image: url(/strage/cardlogobg.jpg);
     }
-  }
-  p {
-    font-size: 14px;
-    font-family: $main-font;
-  }
+    .card-body {
+        font-family: $main-font;
+    }
+    .btn-link {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .brand {
+        p {
+            font-size: 14px;
+            font-family: $main-font;
+        }
+    }
 }
 
+//brand-info
+.brand-info {
+    p {
+        font-family: $main-font;
+        font-size: 20px;
+    }
+    h2 {
+        font-family: $main-font;
+    }
+    hr {
+        height: 6px;
+        background: linear-gradient(to right, white, gray);
+        background: linear-gradient(to left, gray, white);
+        border: none;
+    }
+    .cp_hr06 {
+        position: relative;
+        height: 3px;
+        border-width: 0;
+        background-image: -webkit-linear-gradient(
+            left,
+            transparent 0%,
+            #283593 50%,
+            transparent 100%
+        );
+        background-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            #283593 50%,
+            transparent 100%
+        );
+    }
+}
 
-
+.brand-products {
+    .perfumelist-title {
+        h1 {
+            @include title-font;
+        }
+    }
+    .perfumes {
+        p {
+            font-size: 14px;
+            font-family: $main-font;
+        }
+    }
+}

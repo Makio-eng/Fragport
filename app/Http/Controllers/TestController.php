@@ -14,4 +14,7 @@ class TestController extends Controller
         //dd($values);
         return view('tests.test', compact('values'));
     }
+    public function laravel() {
+        return view('welcome');
+    }
 }
