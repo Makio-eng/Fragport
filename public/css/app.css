@@ -16951,7 +16951,6 @@ readers do not read off random characters that represent icons */
 
 .header {
   font-family: "Noto Serif JP", sans-serif;
-  height: 130px;
 }
 
 .header .jumbotron-fluid {
@@ -16973,19 +16972,15 @@ readers do not read off random characters that represent icons */
 }
 
 .header .btn {
-  border-color: #df93e5;
-  color: #df93e5;
-}
-
-.header .btn:hover {
   color: white;
   background-color: #ebbcef;
   border-color: #ebbcef;
 }
 
-.header .btn:hover:active {
+.header .btn:active {
   outline: none;
   background-color: #df93e5;
+  border-color: #df93e5;
 }
 
 .footer {
@@ -17074,7 +17069,7 @@ readers do not read off random characters that represent icons */
 
 .information-logo {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 36px;
+  font-size: 45px;
   color: black;
 }
 
@@ -17097,13 +17092,13 @@ readers do not read off random characters that represent icons */
 
 .about .about-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 36px;
+  font-size: 45px;
   color: black;
 }
 
 .brandlist-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 36px;
+  font-size: 45px;
   color: black;
 }
 
@@ -17157,9 +17152,9 @@ readers do not read off random characters that represent icons */
   background-image: linear-gradient(90deg, transparent 0%, #283593 50%, transparent 100%);
 }
 
-.brand-products .perfumelist-title h1 {
+.brand-products .perfumelist-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 36px;
+  font-size: 45px;
   color: black;
 }
 
@@ -17206,7 +17201,7 @@ readers do not read off random characters that represent icons */
 
 .review-create .review-create-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 36px;
+  font-size: 45px;
   color: black;
 }
 
@@ -17218,7 +17213,7 @@ readers do not read off random characters that represent icons */
 }
 
 .review-create .review-form .user-name {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .review-create .review-form .review-body textarea {
@@ -17229,6 +17224,7 @@ readers do not read off random characters that represent icons */
 .review-create .btn {
   border-color: #DF93E5;
   color: #DF93E5;
+  font-weight: bolder;
 }
 
 .review-create .btn:hover {
@@ -17240,5 +17236,197 @@ readers do not read off random characters that represent icons */
 .review-create .btn:hover:active {
   outline: none;
   background-color: #DF93E5;
+  border-color: #DF93E5;
+}
+
+.user-profile-info {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.user-profile-info h1 {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 45px;
+  color: black;
+}
+
+.user-profile-info .user-image {
+  border-radius: 50%;
+  width: 140px;
+}
+
+.user-profile-info .user-name {
+  font-size: 30px;
+}
+
+.user-profile-info .profile-edit-link {
+  text-decoration: none;
+}
+
+.user-profile-info .fa-cog {
+  color: #808080;
+  font-size: 30px;
+}
+
+.user-profile-info .fa-cog:hover {
+  color: #DF93E5;
+}
+
+.user-profile-info .sns {
+  height: 50px;
+}
+
+.user-profile-info .sns-links {
+  height: 100%;
+}
+
+.user-profile-info .users h2 {
+  font-size: 30px;
+}
+
+.user-profile-info .users p {
+  font-size: 20px;
+}
+
+.user-profile-info .cp_hr06 {
+  position: relative;
+  height: 3px;
+  border-width: 0;
+  background-image: linear-gradient(90deg, transparent 0%, #283593 50%, transparent 100%);
+}
+
+.user-review-title {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 45px;
+  color: black;
+}
+
+.profile-title {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 45px;
+  color: black;
+}
+
+.user-profile-edit {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.user-profile-edit .user-image {
+  border-radius: 50%;
+  width: 140px;
+}
+
+.user-profile-edit .user-name {
+  font-size: 30px;
+}
+
+.user-profile-edit .profile-edit-link {
+  text-decoration: none;
+}
+
+.user-profile-edit .fa-cog {
+  color: #808080;
+  font-size: 30px;
+}
+
+.user-profile-edit .fa-cog:hover {
+  color: #DF93E5;
+}
+
+.user-profile-edit .sns {
+  width: 50px;
+}
+
+.user-profile-edit .sns-links {
+  width: 100%;
+}
+
+.user-profile-edit .users label {
+  font-size: 25px;
+}
+
+.user-profile-edit .users input {
+  font-size: 15px;
+}
+
+.user-profile-edit textarea {
+  resize: none;
+  font-size: 20px;
+}
+
+.user-profile-edit .btn {
+  border-color: #DF93E5;
+  color: #DF93E5;
+  font-weight: bolder;
+}
+
+.user-profile-edit .btn:hover {
+  color: white;
+  background-color: #ebbcef;
+  border-color: #ebbcef;
+}
+
+.user-profile-edit .btn:hover:active {
+  outline: none;
+  background-color: #DF93E5;
+  border-color: #DF93E5;
+}
+
+.contact-form-head .contact-form-title {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 45px;
+  color: black;
+}
+
+.contact-form-head .complete {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 45px;
+  color: black;
+}
+
+.contact-form-head p {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 20px;
+}
+
+.contact-form {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.contact-form label {
+  font-size: 20px;
+}
+
+.contact-form li {
+  color: red;
+}
+
+.contact-form input {
+  font-size: 15px;
+}
+
+.contact-form p {
+  font-size: 20px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .btn {
+  border-color: #DF93E5;
+  color: #DF93E5;
+  font-weight: bolder;
+}
+
+.contact-form .btn:hover {
+  color: white;
+  background-color: #ebbcef;
+  border-color: #ebbcef;
+}
+
+.contact-form .btn:hover:active {
+  outline: none;
+  background-color: #DF93E5;
+  border-color: #DF93E5;
 }
 

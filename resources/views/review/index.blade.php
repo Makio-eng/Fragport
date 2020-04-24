@@ -6,7 +6,7 @@
     <p class="mx-auto mb-0">(タシット)</p>
   </div>
   <div class="perfume row">
-    <div class="col-lg-6 perfume-image">
+    <div class="col-lg-6 perfume-image py-2">
       <img src="https://picsum.photos/400" alt="Tacit(タシット)" class="image-fluid d-block mx-auto">
     </div>
     <div class="col-lg-6 perfume-about">

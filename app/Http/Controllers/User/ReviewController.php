@@ -18,6 +18,6 @@ class ReviewController extends Controller
   }
   public function create()
   {
-    return redirect('review.index');
+    return redirect('review');
   }
 }

@@ -20,6 +20,13 @@
   <!-- Styles -->
   <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+  <!-- slick -->
+  <link rel="stylesheet" href="{{ asset('css/slick-theme.css')}}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('css/slick.css')}}" type="text/css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{{ asset('js/slick.min.js')}}" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -46,7 +53,7 @@
                   {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Mypage</a>
+                  <a class="dropdown-item" href="{{ action('User\ProfileController@show')}}">Mypage</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('user.logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
@@ -60,8 +67,8 @@
               @endunless
             </ul>
           </div>
-          <div class="navbar-menu row py-o">
-            <nav class="navbar navbar-expand-lg navbar-light w-100 py-0 px-4">
+          <div class="navbar-menu row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100 px-4 py-0">
               <a class="navbar-brand ml-3" href="{{ url('/') }}">{{ config('app.name', 'Fragport') }}</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,16 +85,20 @@
                     <a class="nav-link text-white" href="{{ url('/brand') }}">Brand List</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link text-white" href="#">Contact</a>
+                    <a class="nav-link text-white" href="{{ url('/contact') }}">Contact</a>
                   </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                  <button class="btn my-2 my-sm-0" type="submit">
+                    <svg class="bi bi-search mb-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd" />
+                      <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd" />
+                    </svg></button>
                 </form>
               </div>
+            </nav>
           </div>
-          </nav>
         </div>
       </div>
     </header>

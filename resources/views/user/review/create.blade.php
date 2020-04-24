@@ -10,7 +10,7 @@
     <div class="review-form row">
       <div class="col-4 p-3">
         <img src="/storage/nopict.png" alt="" class="img-fluid d-block mx-auto my-4 perfume-pic">
-        <input type="file" class="form-control-file" name="image">
+        <input type="file" class="form-control-file" name="perfume-pic">
       </div>
 
       <div class="review col-8">
@@ -19,7 +19,7 @@
             <img src="/storage/user-icon.png" alt="" class="img-fluid user-image">
           </div>
           <div class="col-9 d-flex align-items-center">
-            <p class="user-name">ユーザーネーム</p>
+            <p class="user-name">T.Aramaki</p>
           </div>
         </div>
         <div class="review-body row py-2">
@@ -28,8 +28,9 @@
       </div>
     </div>
     <div class="row py-3">
-      <input class="btn btn-outline-success btn-lg mx-auto" type="submit" value="Post">
+      <input class="btn btn-lg mx-auto" type="submit" value="Post">
     </div>
+    @csrf
   </form>
 </div>
 @endsection

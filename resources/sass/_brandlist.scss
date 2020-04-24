@@ -63,9 +63,7 @@
 
 .brand-products {
     .perfumelist-title {
-        h1 {
-            @include title-font;
-        }
+        @include title-font;
     }
     .perfumes {
         p {

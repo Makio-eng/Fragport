@@ -1,7 +1,7 @@
 @extends('layouts.user.app')
 @section('content')
-<div class="brandlist-title row">
-  <h1 class="mx-auto">Bland List</h1>
+<div class="row">
+  <h1 class="brandlist-title mx-auto">Bland List</h1>
 </div>
 
 <div class="brand-list">

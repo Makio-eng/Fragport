@@ -1,0 +1,106 @@
+.user-profile-info {
+    font-family: $main-font;
+    h1 {
+        @include title-font;
+    }
+    .user-image {
+        border-radius: 50%;
+        width: 140px;
+    }
+    .user-name {
+        font-size: 30px;
+    }
+    .profile-edit-link {
+        text-decoration: none;
+    }
+    .fa-cog {
+        color: $sub-color;
+        font-size: 30px;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .sns {
+        height: 50px;
+    }
+    .sns-links {
+        height: 100%;
+    }
+    .users {
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .cp_hr06 {
+        position: relative;
+        height: 3px;
+        border-width: 0;
+        background-image: -webkit-linear-gradient(
+            left,
+            transparent 0%,
+            #283593 50%,
+            transparent 100%
+        );
+        background-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            #283593 50%,
+            transparent 100%
+        );
+    }
+}
+
+.user-review-title {
+    @include title-font;
+}
+
+//プロフィール編集
+.profile-title {
+    @include title-font;
+}
+.user-profile-edit {
+    font-family: $main-font;
+
+    .user-image {
+        border-radius: 50%;
+        width: 140px;
+    }
+    .user-name {
+        font-size: 30px;
+    }
+    .profile-edit-link {
+        text-decoration: none;
+    }
+    .fa-cog {
+        color: $sub-color;
+        font-size: 30px;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .sns {
+        width: 50px;
+    }
+    .sns-links {
+        width: 100%;
+    }
+    .users {
+        label {
+            font-size: 25px;
+        }
+        input {
+            font-size: 15px;
+        }
+    }
+    textarea {
+        resize: none;
+        font-size: 20px;
+    }
+    .btn {
+        @include main-btn;
+    }
+}

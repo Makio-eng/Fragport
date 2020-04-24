@@ -1,7 +1,28 @@
-test<br>
+<div class="row">
+  <?php
 
-@foreach($values as $value)
-テスト{{$value->id}}の内容は<br>
-{{$value->text}}です<br>
+  class FruitClass
+  {
 
-@endforeach
+    public $fruit = 'Apple';
+
+    //メソッドの宣言
+    public function FruitMethod()
+    {
+      $fruit = 'Grape';
+
+      echo $fruit;
+      //Grapeが出力
+      echo $this->fruit;
+      //Appleが出力
+    }
+  }
+
+  //インスタンスの生成
+  $class = new FruitClass();
+  //メソッドの呼出し
+  $class->FruitMethod();
+
+  ?>
+</div>
+@extends('layouts.slick')

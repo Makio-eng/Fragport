@@ -2,19 +2,18 @@
     outline: none !important;
 }
 *:focus {
-    box-shadow:none !important;
+    box-shadow: none !important;
 }
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
-
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 //font-awesome
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -23,22 +22,28 @@
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
 //ヘッダー・フッター
-@import 'front';
+@import "front";
 
 //ホーム画面
-@import 'home';
+@import "home";
 
 //認証画面
-@import 'auth';
+@import "auth";
 
 //インフォメーション画面
-@import 'information';
+@import "information";
 
 //about画面
-@import 'about';
+@import "about";
 
 //ブランドリスト画面
-@import 'brandlist';
+@import "brandlist";
 
 //レビュー関連
-@import 'review';
+@import "review";
+
+//プロフィール関連
+@import "profile";
+
+//コンタクト関連
+@import "contact";

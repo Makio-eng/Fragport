@@ -1,7 +1,7 @@
 @extends('layouts.user.app')
 @section('content')
-<div class="information-logo row">
-  <h1 class="mx-auto">Information</h1>
+<div class="row">
+  <h1 class="information-logo mx-auto">Information</h1>
 </div>
 
 <div class="information container border border-shadow">

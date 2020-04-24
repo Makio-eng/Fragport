@@ -14,29 +14,29 @@
 </div>
 
 <div class="brand-products conteiner">
-  <div class="perfumelist-title row">
-    <h1 class="mx-auto">Perfume List</h1>
+  <div class="row">
+    <h1 class="perfumelist-title mx-auto">Perfume List</h1>
   </div>
   <div class="perfumes d-flex p-3 row">
     <div class="perfume col-4">
       <a class="perfume-link" href="{{ url('/review')}}">
-        <img src="https://picsum.photos/200" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
+        <img src="https://picsum.photos/300" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
       </a>
       <p class="text-center mb-0">Tacit</p>
       <p class="text-center">(タシット)</p>
     </div>
     <div class="perfume col-4">
-      <img src="https://picsum.photos/200" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
+      <img src="https://picsum.photos/300" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
       <p class="text-center mb-0">Tacit</p>
       <p class="text-center">(タシット)</p>
     </div>
     <div class="perfume col-4">
-      <img src="https://picsum.photos/200" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
+      <img src="https://picsum.photos/300" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
       <p class="text-center mb-0">Tacit</p>
       <p class="text-center">(タシット)</p>
     </div>
     <div class="perfume col-4">
-      <img src="https://picsum.photos/200" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
+      <img src="https://picsum.photos/300" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
       <p class="text-center mb-0">Tacit</p>
       <p class="text-center">(タシット)</p>
     </div>
