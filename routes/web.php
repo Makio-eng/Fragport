@@ -45,7 +45,7 @@ Route::group(['prefix' => '/review', 'name' => 'review',], function () {
 Route::group(['prefix' => 'user/review', 'name' => 'user/review', 'middleware' => 'auth'], function () {
   Route::get('create', 'User\ReviewController@add');
   Route::post('create', 'User\ReviewController@create');
-  Route::get('edit', 'User\ReviewController@edhit');
+  Route::get('edit', 'User\ReviewController@edit');
   Route::post('update', 'User\ReviewController@update');
 });
 
@@ -80,5 +80,45 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
     // TOPページ
     Route::resource('home', 'HomeController', ['only' => 'index']);
+
+
+    //インフォメーション関連
+    Route::group(['prefix' => 'information'], function () {
+      Route::get('index', 'InformationController@index');
+      Route::get('create', 'InformationController@add');
+      Route::post('create', 'InformationController@create');
+      Route::get('edit', 'InformationController@edit');
+      Route::post('update', 'InformationController@update');
+      Route::get('delete', 'InformationController@delete');
+    });
+
+    //ブランド関連
+    Route::group(['prefix' => 'brand'], function () {
+      Route::get('index', 'BrandController@index');
+      Route::get('info', 'BrandController@info');
+      Route::get('create', 'BrandController@add');
+      Route::post('create', 'BrandController@create');
+      Route::get('edit', 'BrandController@edit');
+      Route::post('update', 'BrandController@update');
+      Route::get('delete', 'BrandController@delete');
+    });
+
+    //香水関連
+    Route::group(['prefix' => 'perfume'], function () {
+      Route::get('info', 'PerfumeController@info');
+      Route::get('info', 'PerfumeController@info');
+      Route::get('create', 'PerfumeController@add');
+      Route::post('create', 'PerfumeController@create');
+      Route::get('edit', 'PerfumeController@edit');
+      Route::post('update', 'PerfumeController@update');
+      Route::get('delete', 'PerfumeController@delete');
+    });
+
+    //コンタクトフォーム関連
+    Route::group(['prefix' => 'contact'], function () {
+      Route::get('index', 'ContactController@index');
+      Route::get('reply', 'ContactController@reply');
+      Route::post('reply', 'ContactController@process');
+    });
   });
 });

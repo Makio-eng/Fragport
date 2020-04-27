@@ -17029,6 +17029,14 @@ readers do not read off random characters that represent icons */
   text-align: center;
 }
 
+.admin-header {
+  font-family: Comic Sans MS;
+}
+
+.admin-footer {
+  font-family: Comic Sans MS;
+}
+
 .information {
   font-family: "Noto Serif JP", sans-serif;
   font-size: 20px;
@@ -17067,13 +17075,13 @@ readers do not read off random characters that represent icons */
   font-family: "Noto Serif JP", sans-serif;
 }
 
-.information-logo {
+.information .information-logo {
   font-family: "Noto Serif JP", sans-serif;
   font-size: 45px;
   color: black;
 }
 
-.information .information-title {
+.information .information-title h2 {
   font-family: "Noto Serif JP", sans-serif;
   font-size: 27px;
 }
@@ -17082,11 +17090,11 @@ readers do not read off random characters that represent icons */
   font-size: 19px;
 }
 
-.pagination-area .page-link {
+.information .pagination-area .page-link {
   color: #d97ee0;
 }
 
-.pagination-area .disabled {
+.information .pagination-area .disabled {
   color: #808080;
 }
 
@@ -17104,10 +17112,6 @@ readers do not read off random characters that represent icons */
 
 .brand-list {
   font-family: "Noto Serif JP", sans-serif;
-}
-
-.brand-list .card-header {
-  background-image: url(/strage/cardlogobg.jpg);
 }
 
 .brand-list .card-body {
@@ -17169,9 +17173,14 @@ readers do not read off random characters that represent icons */
   font-size: 35px;
 }
 
-.perfumeindex-header .perfume p {
+.perfumeindex-header .perfume .perfume-about p {
   font-family: "Noto Serif JP", sans-serif;
   font-size: 20px;
+}
+
+.perfumeindex-header .perfume .perfume-detail p {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 15x;
 }
 
 .perfumeindex-header .cp_hr06 {
@@ -17193,6 +17202,13 @@ readers do not read off random characters that represent icons */
 
 .review-list .bi:hover {
   color: #cd55d6;
+}
+
+.review-list .reviews img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .review-create {
@@ -17224,7 +17240,6 @@ readers do not read off random characters that represent icons */
 .review-create .btn {
   border-color: #DF93E5;
   color: #DF93E5;
-  font-weight: bolder;
 }
 
 .review-create .btn:hover {
@@ -17236,7 +17251,52 @@ readers do not read off random characters that represent icons */
 .review-create .btn:hover:active {
   outline: none;
   background-color: #DF93E5;
-  border-color: #DF93E5;
+}
+
+.review-delete {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-modal .review-edit-link {
+  font-size: 20px;
+}
+
+.review-modal .user-profile img {
+  border-radius: 50%;
+  width: 140px;
+  border: 2px;
+  border-color: #808080;
+}
+
+.review-modal .user-profile p {
+  font-size: 25px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-modal .perfume-name p {
+  font-size: 24px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-modal .review-body {
+  height: 300px;
+  overflow: auto;
+}
+
+.review-modal .review-body .body {
+  font-size: 22px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-modal .like p {
+  font-size: 16px;
+  color: pink;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-modal .date p {
+  font-size: 16px;
+  font-family: "Noto Serif JP", sans-serif;
 }
 
 .user-profile-info {

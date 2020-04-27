@@ -1,20 +1,22 @@
-.information-logo {
-    @include title-font;
-}
 .information {
+    .information-logo {
+        @include title-font;
+    }
     .information-title {
-        font-family: $main-font;
-        font-size: 27px;
+        h2 {
+            font-family: $main-font;
+            font-size: 27px;
+        }
     }
     .information-contents {
         font-size: 19px;
     }
-}
-.pagination-area {
-    .page-link {
-        color: darken($main-color, 5%);
-    }
-    .disabled {
-        color: $sub-color;
+    .pagination-area {
+        .page-link {
+            color: darken($main-color, 5%);
+        }
+        .disabled {
+            color: $sub-color;
+        }
     }
 }

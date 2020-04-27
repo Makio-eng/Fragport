@@ -20,4 +20,8 @@ class ReviewController extends Controller
   {
     return redirect('review');
   }
+  public function edit()
+  {
+    return view('user.review.edit');
+  }
 }

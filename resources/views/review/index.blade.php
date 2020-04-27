@@ -6,16 +6,85 @@
     <p class="mx-auto mb-0">(タシット)</p>
   </div>
   <div class="perfume row">
-    <div class="col-lg-6 perfume-image py-2">
-      <img src="https://picsum.photos/400" alt="Tacit(タシット)" class="image-fluid d-block mx-auto">
+    <div class="col-md-6 perfume-image py-2">
+      <img src="/storage/tacit.png" alt="Tacit(タシット)" class="img-fluid mx-auto">
     </div>
-    <div class="col-lg-6 perfume-about">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam provident debitis! Veniam reiciendis reprehenderit, sint exercitationem repudiandae asperiores vitae incidunt consectetur ratione. Eum expedita est culpa voluptas! Impedit, optio.</p>
+    <div class="col-md-5 mx-2">
+      <div class="row perfume-about mx-auto">
+        <p class="mx-auto">
+          バジルグランベールとさわやかなシトラスノートが贅沢に香る、活気に満ちた非常に現代的な香り。
+        </p>
+      </div>
+      <div class="perfume-detail">
+        <div class="perfume-rate d-block row">
+          <p class="mb-0">-賦香率-</p>
+          <p>オードパルファン</p>
+        </div>
+        <div class="perfume-note d-block row">
+          <p class="mb-0">-香調-</p>
+          <p>クリスピー、グリーン、シトラス</p>
+        </div>
+        <div class="perfume-material d-block row">
+          <p class="mb-0">-香料-</p>
+          <p>ユズ、ベチバーハート、バジルグランベール</p>
+        </div>
+        <div class="perfumer d-block row">
+          <p class="mb-0">-調香師-</p>
+          <p>セリーヌ・バレル</p>
+        </div>
+      </div>
     </div>
   </div>
   <br>
   <hr class="cp_hr06 mx-auto" />
 </div>
+
+<!-- Modal -->
+<div class="modal review-modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row py-3">
+            <div class="col-lg-7">
+              <img src="https://picsum.photos/600" alt="" class="img-fluid mx-auto">
+            </div>
+            <div class="col-lg-5">
+              <div class="row">
+                <a href="{{ action('User\ReviewController@edit')}}" class="ml-auto review-edit-link">
+                  <i class="fas fa-cog review-edit-link"></i>
+                </a>
+              </div>
+              <div class="user-profile row">
+                <div class="col-3">
+                  <img src="/storage/user-icon.png" alt="" class="img-fluid user-image">
+                </div>
+                <div class="col-9 d-flex align-items-center">
+                  <p class="user-name">T.Aramaki</p>
+                </div>
+              </div>
+              <div class="row review-body">
+                <p class="body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ad sit nulla nisi tenetur commodi. Fuga quibusdam neque iusto aliquid est, officiis nihil voluptatibus quo, accusantium harum ex voluptates voluptatem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nam maiores, similique debitis explicabo repudiandae, animi ut maxime, temporibus aliquid eum. Sunt, perferendis? Iste incidunt magnam nesciunt nostrum possimus! Exercitationem?
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-6 like">
+                  <p class="text-center"><i class="fas fa-heart"></i>20</p>
+                </div>
+                <div class="col-6 date">
+                  <p class="text-center"><i class="far fa-clock"></i>2020/03/01</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ModalEnd -->
+
 
 <div class="review-list container">
   <div class="review-list-title row mt-3">
@@ -30,26 +99,44 @@
   </div>
   <div class="reviews row">
     <div class="col-4 py-lg-2">
-      <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
+      <a class="review-link" data-toggle="modal" data-target="#exampleModalCenter">
+        <img src="/storage/tacit01.jpg" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
     <div class="col-4 py-lg-2">
       <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
+        <img src="/storage/tacit02.jpg" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
     <div class="col-4 py-lg-2">
       <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
+        <img src="/storage/tacit03.png" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
     <div class="col-4 py-lg-2">
       <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
+        <img src="/storage/tacit04.jpg" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
   </div>
+  <div class="row">
+    <div class="col-4 py-lg-2">
+      <a class="review-link" href="#">
+        <img src="https://picsum.photos/600" alt="" class="img-fluid d-block mx-auto my-4 ">
+      </a>
+    </div>
+    <div class="col-4 py-lg-2">
+      <a class="review-link" href="#">
+        <img src="https://picsum.photos/600" alt="" class="img-fluid d-block mx-auto my-4 ">
+      </a>
+    </div>
+    <div class="col-4 py-lg-2">
+      <a class="review-link" href="#">
+        <img src="https://picsum.photos/600" alt="" class="img-fluid d-block mx-auto my-4 ">
+      </a>
+    </div>
+  </div>
+
 </div>
 
 @endsection

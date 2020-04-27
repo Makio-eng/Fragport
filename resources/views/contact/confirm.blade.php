@@ -14,7 +14,7 @@
     <div class="col-8 offset-2">
       <div class="form-group align-items-center mx-auto my-2">
         <p class="mb-0">ご氏名</p>
-        <p>{{$contact->name}}</p>
+        <p>{{$contact->name}}　様</p>
       </div>
       <div class="form-group align-items-center mx-auto my-2">
         <p class="mb-0">メールアドレス</p>

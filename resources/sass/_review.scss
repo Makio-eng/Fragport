@@ -8,9 +8,17 @@
         }
     }
     .perfume {
-        p {
-            font-family: $main-font;
-            font-size: 20px;
+        .perfume-about {
+            p {
+                font-family: $main-font;
+                font-size: 20px;
+            }
+        }
+        .perfume-detail {
+            p {
+                font-family: $main-font;
+                font-size: 15x;
+            }
         }
     }
     .cp_hr06 {
@@ -44,9 +52,16 @@
             color: darken($main-color, 15%);
         }
     }
+    .reviews {
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
 }
 
-//レビュー投稿
+//レビュー投稿・編集
 .review-create {
     font-family: $main-font;
     .review-create-title {
@@ -81,6 +96,55 @@
                 outline: none;
                 background-color: $main-color;
             }
+        }
+    }
+}
+.review-delete {
+    font-family: $main-font;
+}
+
+//モーダル
+.review-modal {
+    .review-edit-link {
+        font-size: 20px;
+    }
+    .user-profile {
+        img {
+            border-radius: 50%;
+            width: 140px;
+            border: 2px;
+            border-color: $sub-color;
+        }
+        p {
+            font-size: 25px;
+            font-family: $main-font;
+        }
+    }
+    .perfume-name {
+        p {
+            font-size: 24px;
+            font-family: $main-font;
+        }
+    }
+    .review-body {
+        height: 300px;
+        overflow: auto;
+        .body {
+            font-size: 22px;
+            font-family: $main-font;
+        }
+    }
+    .like {
+        p {
+            font-size: 16px;
+            color: pink;
+            font-family: $main-font;
+        }
+    }
+    .date {
+        p {
+            font-size: 16px;
+            font-family: $main-font;
         }
     }
 }

@@ -63,6 +63,54 @@
   <hr class="cp_hr06 mx-auto" />
 </div>
 
+<!-- modal -->
+<div class="modal review-modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row py-3">
+            <div class="col-lg-7">
+              <img src="https://picsum.photos/600" alt="" class="img-fluid mx-auto">
+            </div>
+            <div class="col-lg-5">
+              <div class="row">
+                <a href="{{ action('User\ReviewController@edit')}}" class="ml-auto review-edit-link">
+                  <i class="fas fa-cog review-edit-link"></i>
+                </a>
+              </div>
+              <div class="user-profile row">
+                <div class="col-3">
+                  <img src="/storage/user-icon.png" alt="" class="img-fluid user-image">
+                </div>
+                <div class="col-9 d-flex align-items-center">
+                  <p class="user-name">T.Aramaki</p>
+                </div>
+              </div>
+              <div class="perfume-name row ">
+                <p class="brand mx-auto">Aesop 「タシット」</p>
+              </div>
+              <div class="row review-body">
+                <p class="body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ad sit nulla nisi tenetur commodi. Fuga quibusdam neque iusto aliquid est, officiis nihil voluptatibus quo, accusantium harum ex voluptates voluptatem?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil similique rem excepturi possimus ipsa architecto laudantium molestias voluptatibus esse corporis impedit totam, perspiciatis laborum doloremque vel, expedita, magnam magni? Praesentium.
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-6 like">
+                  <p class="text-center"><i class="fas fa-heart"></i>20</p>
+                </div>
+                <div class="col-6 date">
+                  <p class="text-center"><i class="far fa-clock"></i>2020/03/01</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ModalEnd -->
 
 <div class="container">
   <div class="row">
@@ -70,8 +118,8 @@
   </div>
   <div class="user-review-list row">
     <div class="col-4 py-lg-2">
-      <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
+      <a class="review-link" data-toggle="modal" data-target="#exampleModalCenter">
+        <img src=" https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
     <div class="col-4 py-lg-2">

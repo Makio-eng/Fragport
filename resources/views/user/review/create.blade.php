@@ -6,11 +6,13 @@
     <h1 class="review-create-title mx-auto py-3">レビューを投稿</h1>
   </div>
 
+
+
   <form action="{{ action('User\ReviewController@create')}}" method="post" enctype="multipart/form-data">
     <div class="review-form row">
       <div class="col-4 p-3">
         <img src="/storage/nopict.png" alt="" class="img-fluid d-block mx-auto my-4 perfume-pic">
-        <input type="file" class="form-control-file" name="perfume-pic">
+        <input type="file" class="form-control-file" name="perfume_pic">
       </div>
 
       <div class="review col-8">

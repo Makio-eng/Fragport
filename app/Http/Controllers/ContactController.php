@@ -12,6 +12,8 @@ class ContactController extends Controller
   {
     return view('contact.create');
   }
+
+
   public function confirm(Request $request)
   {
     $this->validate($request, [
@@ -24,25 +26,24 @@ class ContactController extends Controller
 
     return view('contact.confirm', compact('contact'));
   }
+
+
   public function process(Request $request)
   {
     // ※要バリデーション
-
-    $action = $request->get('action', 'back');
+    $action = $request->get('action', '戻る');
     // 二つ目は初期値です。
-
     $input = $request->except('action');
     // そして、入力内容からは取り除いておきます。
 
-    if ($action === 'submit') {
-
+    if ($action === '送信') {
       // メール送信処理などを実装
-
+      $contact = new ContactForm($request->all());
+      $contact->save();
       return view('contact.complete');
     } else {
 
       // 戻る
-
       return redirect()->action('ContactController@add')
         ->withInput($input);
     }
