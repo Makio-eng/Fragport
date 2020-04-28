@@ -7,11 +7,11 @@
 
   <div class="information-title row py-2 border border-shadow">
     <div class="col-md-4">
-      <h2 class="text-center">2020/12/12</h2>
+      <h3 class="text-center">2020/12/12</h3>
     </div>
 
     <div class="col-md-8">
-      <h2 class="text-center">インフォメーションタイトル</h2>
+      <h3 class="text-center">インフォメーションタイトル</h3>
     </div>
 
     <div class="information-contents row">

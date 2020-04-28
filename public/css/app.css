@@ -338,6 +338,12 @@ legend {
   white-space: normal;
 }
 
+@media (max-width: 1200px) {
+  legend {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+}
+
 progress {
   vertical-align: baseline;
 }
@@ -400,9 +406,23 @@ h1,
   font-size: 2.25rem;
 }
 
+@media (max-width: 1200px) {
+  h1,
+  .h1 {
+    font-size: calc(1.35rem + 1.2vw);
+  }
+}
+
 h2,
 .h2 {
   font-size: 1.8rem;
+}
+
+@media (max-width: 1200px) {
+  h2,
+  .h2 {
+    font-size: calc(1.305rem + 0.66vw);
+  }
 }
 
 h3,
@@ -410,9 +430,23 @@ h3,
   font-size: 1.575rem;
 }
 
+@media (max-width: 1200px) {
+  h3,
+  .h3 {
+    font-size: calc(1.2825rem + 0.39vw);
+  }
+}
+
 h4,
 .h4 {
   font-size: 1.35rem;
+}
+
+@media (max-width: 1200px) {
+  h4,
+  .h4 {
+    font-size: calc(1.26rem + 0.12vw);
+  }
 }
 
 h5,
@@ -436,10 +470,22 @@ h6,
   line-height: 1.2;
 }
 
+@media (max-width: 1200px) {
+  .display-1 {
+    font-size: calc(1.725rem + 5.7vw);
+  }
+}
+
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
   line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .display-2 {
+    font-size: calc(1.675rem + 5.1vw);
+  }
 }
 
 .display-3 {
@@ -448,10 +494,22 @@ h6,
   line-height: 1.2;
 }
 
+@media (max-width: 1200px) {
+  .display-3 {
+    font-size: calc(1.575rem + 3.9vw);
+  }
+}
+
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+  }
 }
 
 hr {
@@ -6095,6 +6153,12 @@ a.badge-dark.focus {
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
+}
+
+@media (max-width: 1200px) {
+  .close {
+    font-size: calc(1.26rem + 0.12vw);
+  }
 }
 
 .close:hover {
@@ -17045,7 +17109,6 @@ readers do not read off random characters that represent icons */
 .contents-logo {
   font-family: "Noto Serif JP", sans-serif;
   color: black;
-  font-size: 29px;
   text-align: center;
   margin-top: 5px;
 }
@@ -17054,7 +17117,7 @@ readers do not read off random characters that represent icons */
   font-family: "Noto Serif JP", sans-serif;
   color: black;
   text-align: right;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .more:hover {
@@ -17063,7 +17126,7 @@ readers do not read off random characters that represent icons */
 }
 
 .brandlist .brand p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Noto Serif JP", sans-serif;
 }
 
@@ -17077,17 +17140,15 @@ readers do not read off random characters that represent icons */
 
 .information .information-logo {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
 .information .information-title h2 {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 27px;
 }
 
 .information .information-contents {
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .information .pagination-area .page-link {
@@ -17100,13 +17161,11 @@ readers do not read off random characters that represent icons */
 
 .about .about-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
 .brandlist-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
@@ -17129,17 +17188,18 @@ readers do not read off random characters that represent icons */
 }
 
 .brand-list .brand p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Noto Serif JP", sans-serif;
 }
 
-.brand-info p {
+.brand-info .brand-logo p {
   font-family: "Noto Serif JP", sans-serif;
   font-size: 20px;
 }
 
-.brand-info h2 {
+.brand-info .brandabout {
   font-family: "Noto Serif JP", sans-serif;
+  font-size: 20px;
 }
 
 .brand-info hr {
@@ -17158,24 +17218,20 @@ readers do not read off random characters that represent icons */
 
 .brand-products .perfumelist-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
 .brand-products .perfumes p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Noto Serif JP", sans-serif;
 }
 
-.perfumeindex-header .perfume-name p {
-  height: 40px;
+.perfumeindex-header .perfume-name {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 35px;
 }
 
-.perfumeindex-header .perfume .perfume-about p {
+.perfumeindex-header .perfume .perfume-about {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 20px;
 }
 
 .perfumeindex-header .perfume .perfume-detail p {
@@ -17190,9 +17246,9 @@ readers do not read off random characters that represent icons */
   background-image: linear-gradient(90deg, transparent 0%, #283593 50%, transparent 100%);
 }
 
-.review-list h1 {
+.review-list h2 {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .review-list .bi {
@@ -17217,7 +17273,6 @@ readers do not read off random characters that represent icons */
 
 .review-create .review-create-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
@@ -17268,13 +17323,11 @@ readers do not read off random characters that represent icons */
   border-color: #808080;
 }
 
-.review-modal .user-profile p {
-  font-size: 25px;
+.review-modal .user-profile h2 {
   font-family: "Noto Serif JP", sans-serif;
 }
 
-.review-modal .perfume-name p {
-  font-size: 24px;
+.review-modal .perfume-name h2 {
   font-family: "Noto Serif JP", sans-serif;
 }
 
@@ -17284,7 +17337,7 @@ readers do not read off random characters that represent icons */
 }
 
 .review-modal .review-body .body {
-  font-size: 22px;
+  font-size: 16px;
   font-family: "Noto Serif JP", sans-serif;
 }
 
@@ -17305,7 +17358,6 @@ readers do not read off random characters that represent icons */
 
 .user-profile-info h1 {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
@@ -17339,10 +17391,6 @@ readers do not read off random characters that represent icons */
   height: 100%;
 }
 
-.user-profile-info .users h2 {
-  font-size: 30px;
-}
-
 .user-profile-info .users p {
   font-size: 20px;
 }
@@ -17356,13 +17404,11 @@ readers do not read off random characters that represent icons */
 
 .user-review-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
 .profile-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
@@ -17400,17 +17446,13 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
-.user-profile-edit .users label {
-  font-size: 25px;
-}
-
 .user-profile-edit .users input {
   font-size: 15px;
 }
 
 .user-profile-edit textarea {
   resize: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .user-profile-edit .btn {
@@ -17433,19 +17475,17 @@ readers do not read off random characters that represent icons */
 
 .contact-form-head .contact-form-title {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
 .contact-form-head .complete {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 45px;
   color: black;
 }
 
 .contact-form-head p {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .contact-form {
@@ -17453,7 +17493,7 @@ readers do not read off random characters that represent icons */
 }
 
 .contact-form label {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .contact-form li {
@@ -17465,7 +17505,7 @@ readers do not read off random characters that represent icons */
 }
 
 .contact-form p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .contact-form textarea {

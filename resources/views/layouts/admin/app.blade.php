@@ -79,13 +79,16 @@
                     <a class="nav-link text-dark" href="{{ url('/about') }}">About</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link text-dark" href="{{ url('/information') }}">Information</a>
+                    <a class="nav-link text-dark" href="{{ url('admin/information/index') }}">Information</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link text-dark" href="{{ url('/brand') }}">Brand List</a>
+                    <a class="nav-link text-dark" href="{{ url('admin/brand/index') }}">Brand List</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link text-dark" href="{{ url('/contact') }}">Contact</a>
+                    <a class="nav-link text-dark" href="{{ url('admin/contact/index') }}">Contact</a>
+                  </li>
+                  <li class="nav-item mx-1">
+                    <a class="nav-link text-dark" href="{{ url('/') }}">User FP</a>
                   </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

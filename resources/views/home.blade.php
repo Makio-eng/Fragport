@@ -91,27 +91,6 @@
       <p class="text-center mb-0">Aesop</p>
       <p class="text-center">(イソップ)</p>
     </div>
-    <div class="brand col-4">
-      <a href="{{ url('/brand/info') }}" class="brand-link">
-        <img src="https://picsum.photos/200/100" class="img-fluid brand-logo d-block mx-auto mb-2">
-      </a>
-      <p class="text-center mb-0">Aesop</p>
-      <p class="text-center">(イソップ)</p>
-    </div>
-    <div class="brand col-4">
-      <a href="{{ url('/brand/info') }}" class="brand-link">
-        <img src="https://picsum.photos/200/100" class="img-fluid brand-logo d-block mx-auto mb-2">
-      </a>
-      <p class="text-center mb-0">Aesop</p>
-      <p class="text-center">(イソップ)</p>
-    </div>
-    <div class="brand col-4">
-      <a href="{{ url('/brand/info') }}" class="brand-link">
-        <img src="https://picsum.photos/200/100" class="img-fluid brand-logo d-block mx-auto mb-2">
-      </a>
-      <p class="text-center mb-0">Aesop</p>
-      <p class="text-center">(イソップ)</p>
-    </div>
   </div>
   <div class="row d-flex justify-content-end m-2">
     <a class="more" href="{{ url('/brand') }}">And more</a>

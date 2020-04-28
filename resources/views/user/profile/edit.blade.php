@@ -65,15 +65,21 @@
 
       <div class="users col-md-7 border border-secondary shadow rounded">
         <div class="form-group align-items-center mx-auto pt-4">
-          <label for="input-favorite-material" class="text-center  mb-2">好きな香料</label>
+          <label for="input-favorite-material" class="text-center  mb-2">
+            <h3>好きな香料</h3>
+          </label>
           <input type="text" class="form-control form-control-sm" name="favoriteMaterial" id="input-favorite-material" placeholder="例）・サンダルウッド ・ネロリ">
         </div>
         <div class="form-group align-items-center mx-auto py-3">
-          <label for="input-my-fragramce" class="text-center  mb-2">マイフレグランス</label>
+          <label for="input-my-fragramce" class="text-center  mb-2">
+            <h3>マイフレグランス</h3>
+          </label>
           <input type="text" class="form-control form-control-sm" name="myFragrance" id="input-my-fragrance" placeholder="例）トムフォード「ネロリ ポルトフィーノ」">
         </div>
         <div class="form-group align-items-center mx-auto py-3">
-          <label for="input-introduction" class="text-center  mb-2">自己紹介</label>
+          <label for="input-introduction" class="text-center  mb-2">
+            <h3>自己紹介</h3>
+          </label>
           <textarea class="form-control" rows="10" name="introduction" id="introduction">{{ old('introduction') }}</textarea>
         </div>
       </div>

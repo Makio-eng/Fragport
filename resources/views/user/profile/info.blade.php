@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="row">
-        <p class="user-name mx-auto">T.Aramaki</p>
+        <h2 class="user-name mx-auto">T.Aramaki</h2>
       </div>
       <div class="row pt-3 pb-5 text-center">
         <div class="sns col-4">
@@ -84,11 +84,11 @@
                   <img src="/storage/user-icon.png" alt="" class="img-fluid user-image">
                 </div>
                 <div class="col-9 d-flex align-items-center">
-                  <p class="user-name">T.Aramaki</p>
+                  <h2 class="user-name">T.Aramaki</h2>
                 </div>
               </div>
               <div class="perfume-name row ">
-                <p class="brand mx-auto">Aesop 「タシット」</p>
+                <h2 class="brand mx-auto">Aesop 「タシット」</h2>
               </div>
               <div class="row review-body">
                 <p class="body">
@@ -114,7 +114,7 @@
 
 <div class="container">
   <div class="row">
-    <h1 class="user-review-title mx-auto">Review List</h1>
+    <h2 class="user-review-title mx-auto">Review List</h2>
   </div>
   <div class="user-review-list row">
     <div class="col-4 py-lg-2">

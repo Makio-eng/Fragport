@@ -1,13 +1,13 @@
 @extends('layouts.user.app')
 @section('content')
 <div class="brand-info container">
-  <div class="bland-logo col-8 offset-2 pt-3">
+  <div class="brand-logo col-8 offset-2 pt-3">
     <img src="https://picsum.photos/400/200" class="img-fluid brand-logo d-block mx-auto mb-2">
     <p class="text-center mb-0">Aesop</p>
     <p class="text-center">(イソップ)</p>
   </div>
   <div class="brandabout row mx-auto col-10 offset-1">
-    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptatum asperiores incidunt eaque dicta accusantium, natus laborum necessitatibus, vel architecto nihil tempora. Ullam perferendis doloribus autem deleniti veniam, blanditiis vitae.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptatum asperiores incidunt eaque dicta accusantium, natus laborum necessitatibus, vel architecto nihil tempora. Ullam perferendis doloribus autem deleniti veniam, blanditiis vitae.</p>
   </div>
   <br>
   <hr class="cp_hr06 mx-auto" />

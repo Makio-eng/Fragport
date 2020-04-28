@@ -3,7 +3,6 @@ $sub-color: #989797;
 $main-font: "Noto Serif JP", sans-serif;
 @mixin title-font {
     font-family: $main-font;
-    font-size: 45px;
     color: black;
 }
 @mixin main-btn {

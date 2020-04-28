@@ -10,11 +10,11 @@
     <div class="brands container my-3">
       <div class="card w-100">
         <div class="card-header" id="headingOne">
-          <h5 class="mb-0">
+          <h4 class="mb-0">
             <button class="btn btn-link text-dark btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               ア行
             </button>
-          </h5>
+          </h4>
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body row d-flex">
@@ -54,11 +54,11 @@
     <div class="brands container my-3">
       <div class="card w-100">
         <div class="card-header" id="headingK">
-          <h5 class="mb-0">
+          <h4 class="mb-0">
             <button class="btn btn-link text-dark btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseK" aria-expanded="true" aria-controls="collapseK">
               カ行
             </button>
-          </h5>
+          </h4>
         </div>
         <div id="collapseK" class="collapse show" aria-labelledby="headingK" data-parent="#accordionExample">
           <div class="card-body row d-flex">
@@ -70,11 +70,11 @@
     <div class="brands container my-3">
       <div class="card w-100">
         <div class="card-header" id="headingS">
-          <h5 class="mb-0">
+          <h4 class="mb-0">
             <button class="btn btn-link text-dark btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseS" aria-expanded="true" aria-controls="collapseS">
               サ行
             </button>
-          </h5>
+          </h4>
         </div>
         <div id="collapseS" class="collapse show" aria-labelledby="headingS" data-parent="#accordionExample">
           <div class="card-body row d-flex">

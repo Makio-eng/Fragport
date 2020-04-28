@@ -1,18 +1,11 @@
 //レビュー一覧
 .perfumeindex-header {
     .perfume-name {
-        p {
-            height: 40px;
-            font-family: $main-font;
-            font-size: 35px;
-        }
+        font-family: $main-font;
     }
     .perfume {
         .perfume-about {
-            p {
-                font-family: $main-font;
-                font-size: 20px;
-            }
+            font-family: $main-font;
         }
         .perfume-detail {
             p {
@@ -41,9 +34,9 @@
 }
 
 .review-list {
-    h1 {
+    h2 {
         font-family: $main-font;
-        font-size: 40px;
+        font-size: 30px;
     }
     .bi {
         font-size: 40px;
@@ -115,14 +108,12 @@
             border: 2px;
             border-color: $sub-color;
         }
-        p {
-            font-size: 25px;
+        h2 {
             font-family: $main-font;
         }
     }
     .perfume-name {
-        p {
-            font-size: 24px;
+        h2 {
             font-family: $main-font;
         }
     }
@@ -130,7 +121,7 @@
         height: 300px;
         overflow: auto;
         .body {
-            font-size: 22px;
+            font-size: 16px;
             font-family: $main-font;
         }
     }

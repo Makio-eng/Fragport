@@ -20,7 +20,7 @@
     }
     .brand {
         p {
-            font-size: 14px;
+            font-size: 16px;
             font-family: $main-font;
         }
     }
@@ -28,12 +28,15 @@
 
 //brand-info
 .brand-info {
-    p {
+    .brand-logo {
+        p {
+            font-family: $main-font;
+            font-size: 20px;
+        }
+    }
+    .brandabout {
         font-family: $main-font;
         font-size: 20px;
-    }
-    h2 {
-        font-family: $main-font;
     }
     hr {
         height: 6px;
@@ -66,7 +69,7 @@
     }
     .perfumes {
         p {
-            font-size: 14px;
+            font-size: 16px;
             font-family: $main-font;
         }
     }
