@@ -79,7 +79,7 @@
                     <a class="nav-link text-dark" href="{{ url('/about') }}">About</a>
                   </li>
                   <li class="nav-item mx-1">
-                    <a class="nav-link text-dark" href="{{ url('admin/information/index') }}">Information</a>
+                    <a class="nav-link text-dark" href="{{action ('Admin\InformationController@index')}}">Information</a>
                   </li>
                   <li class="nav-item mx-1">
                     <a class="nav-link text-dark" href="{{ url('admin/brand/index') }}">Brand List</a>

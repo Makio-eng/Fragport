@@ -7,31 +7,28 @@
   <div class="row">
     <div class="col-sm-5">
       <div class="row">
-        <img src="/storage/user-icon.png" alt="" class="img-fluid user-image mx-auto">
+        @if(optional($user->profile)->userImage_path == null)
+        <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+        @else
+        <img src="{{ asset('storage/images/'. $user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+        @endif
       </div>
       <div class="row">
-        <div class="col-4 offset-8">
-          <a href="{{ action('User\ProfileController@edit')}}" class="profile-edit-link mx-auto">
-            <i class="fas fa-cog"></i>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <h2 class="user-name mx-auto">T.Aramaki</h2>
+        <h2 class="user-name mx-auto">{{$user -> name}}</h2>
       </div>
       <div class="row pt-3 pb-5 text-center">
         <div class="sns col-4">
-          <a href="" class="Twitter-link">
+          <a href="{{optional($user->profile)->twitter}}" class="Twitter-link">
             <img src="/storage/Twitter.png" class="Twitter-logo img-fluid sns-links ">
           </a>
         </div>
         <div class="sns col-4">
-          <a href="" class="instagram-link">
+          <a href="{{optional($user->profile)->instagram}}" class="instagram-link">
             <img src="/storage/instagram2.png" class="instagram-logo img-fluid sns-links ">
           </a>
         </div>
         <div class="sns col-4">
-          <a href="" class="facebook-link">
+          <a href="{{optional($user->profile)->facebook}}" class="facebook-link">
             <img src="/storage/facebook.png" class="facebook-logo img-fluid sns-links ">
           </a>
         </div>
@@ -42,20 +39,22 @@
       <div class="row">
         <h2 class="favorite-material ml-2">好きな香料</h2>
       </div>
+      @if($user->profile)
       <div class="row">
-        <p class="favorite-materials ml-5 mr-2">ウッディ・オリエンタル</p>
+        <p class="favorite-materials ml-5 mr-2">{{$user->profile->favoriteMaterial}}</p>
       </div>
+      @endif
       <div class="row">
         <h2 class="my-fragrances ml-2">マイフレグランス</h2>
       </div>
       <div class="row">
-        <p class="my-fragrance ml-5 mr-2">Creed 「Aventus」</p>
+        <p class="my-fragrance ml-5 mr-2">{{optional($user->profile)->myFragrance}}</p>
       </div>
       <div class="row">
         <h2 class="introducts ml-2">自己紹介</h2>
       </div>
       <div class="row">
-        <p class="introduction ml-5 mr-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequatur beatae unde saepe incidunt consectetur. Dolor, odit! Delectus aliquid consectetur dignissimos mollitia doloremque quo repellat neque! Nihil assumenda tenetur a!</p>
+        <p class="introduction ml-5 mr-2">{{optional($user->profile)->introduction}}</p>
       </div>
     </div>
   </div>
@@ -63,44 +62,63 @@
   <hr class="cp_hr06 mx-auto" />
 </div>
 
-<!-- modal -->
-<div class="modal review-modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row py-3">
-            <div class="col-lg-7">
-              <img src="https://picsum.photos/600" alt="" class="img-fluid mx-auto">
-            </div>
-            <div class="col-lg-5">
-              <div class="row">
-                <a href="{{ action('User\ReviewController@edit')}}" class="ml-auto review-edit-link">
-                  <i class="fas fa-cog review-edit-link"></i>
-                </a>
-              </div>
-              <div class="user-profile row">
-                <div class="col-3">
-                  <img src="/storage/user-icon.png" alt="" class="img-fluid user-image">
+
+<div class="container">
+  <div class="row">
+    <h2 class="user-review-title mx-auto">Review List</h2>
+  </div>
+  <div class="user-review-list row">
+    @foreach($user->reviews as $review)
+    <div class="col-4 py-lg-2">
+      <a class="review-link" data-toggle="modal" data-target="#exampleModalCenter{{$review->id}}">
+        <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+      </a>
+    </div>
+    <!-- modal -->
+    <div class="modal review-modal fade" id="exampleModalCenter{{$review->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row py-3">
+                <div class="col-lg-7">
+                  <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
                 </div>
-                <div class="col-9 d-flex align-items-center">
-                  <h2 class="user-name">T.Aramaki</h2>
-                </div>
-              </div>
-              <div class="perfume-name row ">
-                <h2 class="brand mx-auto">Aesop 「タシット」</h2>
-              </div>
-              <div class="row review-body">
-                <p class="body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ad sit nulla nisi tenetur commodi. Fuga quibusdam neque iusto aliquid est, officiis nihil voluptatibus quo, accusantium harum ex voluptates voluptatem?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil similique rem excepturi possimus ipsa architecto laudantium molestias voluptatibus esse corporis impedit totam, perspiciatis laborum doloremque vel, expedita, magnam magni? Praesentium.
-                </p>
-              </div>
-              <div class="row">
-                <div class="col-6 like">
-                  <p class="text-center"><i class="fas fa-heart"></i>20</p>
-                </div>
-                <div class="col-6 date">
-                  <p class="text-center"><i class="far fa-clock"></i>2020/03/01</p>
+                <div class="col-lg-5">
+                  <div class="user-profile row">
+                    <div class="col-3">
+                      @if(optional($review->user->profile)->userImage_path == null)
+                      <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+                      @else
+                      <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+                      @endif
+                    </div>
+                    <div class="col-9 d-flex align-items-center">
+                      <h2 class="user-name">{{$review->user->name}}</h2>
+                    </div>
+                  </div>
+                  <div class="likedate row">
+                    <div class="col text-right">
+                      <i class="fas fa-heart mr-2">
+                        <p class="text-right d-inline">20</p>
+                      </i>
+                      <i class="far fa-clock">
+                        <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
+                      </i>
+                    </div>
+                  </div>
+
+                  <div class="perfume-name row ">
+                    <h4 class="brand mx-auto pt-1 mb-1">{{$review->perfume->brand->name}}</h4>
+                  </div>
+                  <div class="perfume-name row ">
+                    <h4 class="brand mx-auto pb-1">-{{$review->perfume->ja_name}}-</h4>
+                  </div>
+                  <div class="row review-body">
+                    <p class="body">
+                      {{$review->body}}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -108,35 +126,9 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- ModalEnd -->
+    <!-- ModalEnd -->
 
-<div class="container">
-  <div class="row">
-    <h2 class="user-review-title mx-auto">Review List</h2>
-  </div>
-  <div class="user-review-list row">
-    <div class="col-4 py-lg-2">
-      <a class="review-link" data-toggle="modal" data-target="#exampleModalCenter">
-        <img src=" https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
-      </a>
-    </div>
-    <div class="col-4 py-lg-2">
-      <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
-      </a>
-    </div>
-    <div class="col-4 py-lg-2">
-      <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
-      </a>
-    </div>
-    <div class="col-4 py-lg-2">
-      <a class="review-link" href="#">
-        <img src="https://picsum.photos/300" alt="" class="img-fluid d-block mx-auto my-4 ">
-      </a>
-    </div>
+    @endforeach
 
   </div>
 </div>

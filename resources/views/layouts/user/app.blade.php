@@ -53,7 +53,7 @@
                   {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ action('User\ProfileController@show')}}">Mypage</a>
+                  <a class="dropdown-item" href="{{ action('User\ProfileController@mypage')}}">Mypage</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('user.logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

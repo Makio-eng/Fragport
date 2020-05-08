@@ -4,7 +4,13 @@
 <div class="information-create container">
   <h1 class="text-center">ブランド新規登録</h1>
   <form action="{{ action('Admin\BrandController@create')}}" method="post" enctype="multipart/form-data">
-
+    @if (count($errors) > 0)
+    <ul>
+      @foreach($errors->all() as $e)
+      <li>{{ $e }}</li>
+      @endforeach
+    </ul>
+    @endif
     <div class="form-group align-items-center mx-auto">
       <label for="name" class="">Brand Name(英語)</label>
       <input type="text" class="form-control" id="name" name="name">
@@ -22,7 +28,7 @@
       <textarea id="body" class="form-control" name="body" rows="15"></textarea>
     </div>
     <div class="row py-3">
-      <input class="mx-auto" type="file" name="brand_logo">
+      <input class="mx-auto" type="file" name="brandLogo">
     </div>
     <div class="row">
       <input class="btn btn-primary mx-auto" type="submit" value="新規作成">

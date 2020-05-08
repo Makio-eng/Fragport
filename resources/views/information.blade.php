@@ -4,21 +4,21 @@
   <div class="row">
     <h1 class="information-logo mx-auto">Information</h1>
   </div>
-
-  <div class="information-title row py-2 border border-shadow">
+  @foreach($informations as $information)
+  <div class="information-title row py-2 my-3 border border-shadow">
     <div class="col-md-4">
-      <h3 class="text-center">2020/12/12</h3>
+      <h3 class="text-center">{{$information->created_at->format('Y/m/d')}}</h3>
     </div>
 
     <div class="col-md-8">
-      <h3 class="text-center">インフォメーションタイトル</h3>
+      <h3 class="text-center">{{$information->title}}</h3>
     </div>
 
     <div class="information-contents row">
-      <p class="contents text-center text-justify p-2 mx-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatum dicta, libero neque quam, fugit sit dolore perspiciatis tempora impedit obcaecati, harum magni ab iure. Repudiandae rem maxime numquam corporis.</p>
+      <p class="contents text-center text-justify p-2 mx-4">{{$information->body}}</p>
     </div>
   </div>
-
+  @endforeach
 
   <div class="pagination-area p-5 row justify-content-center">
     <nav aria-label="Page navigation example">

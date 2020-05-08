@@ -38,7 +38,10 @@ class ContactController extends Controller
 
     if ($action === '送信') {
       // メール送信処理などを実装
-      $contact = new ContactForm($request->all());
+
+      $contact = new ContactForm;
+      $form = $request->all();
+      $contact->fill($form);
       $contact->save();
       return view('contact.complete');
     } else {
