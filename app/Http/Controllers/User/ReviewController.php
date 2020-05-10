@@ -31,11 +31,15 @@ class ReviewController extends Controller
 
     return redirect()->route('review.index', ['id' => $request->id]);
   }
+
+
   public function edit(Request $request)
   {
     $review = Review::find($request->id);
     return view('user.review.edit', compact('review'));
   }
+
+
   public function update(Request $request)
   {
     $review = Review::find($request->id);
@@ -54,6 +58,7 @@ class ReviewController extends Controller
 
     return redirect('user/profile/mypage');
   }
+
 
   public function delete(Request $request)
   {

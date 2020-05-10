@@ -15,10 +15,10 @@ class CreatePerfumesTable extends Migration
   {
     Schema::create('perfumes', function (Blueprint $table) {
       $table->id();
-      $table->string('admin_id');
+      $table->string('admin_id')->nullable();
       $table->unsignedBigInteger('brand_id');
       $table->foreign('brand_id')->references('id')->on('brands');
-      $table->unsignedBigInteger('user_id');
+      $table->unsignedBigInteger('user_id')->nullable();
       $table->foreign('user_id')->references('id')->on('users');
       $table->string('name');
       $table->string('ja_name');

@@ -32,7 +32,7 @@ class PerfumeRequest extends FormRequest
       'materials' => 'nullable|string',
       'perfumer' => 'nullable|string',
       'body' => 'nullable|string',
-      'perfumeImage' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+      'perfumeImage' => 'required|file|image|mimes:jpeg,png,jpg|',
 
     ];
   }

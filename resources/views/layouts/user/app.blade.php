@@ -88,13 +88,19 @@
                     <a class="nav-link text-white" href="{{ url('/contact') }}">Contact</a>
                   </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn my-2 my-sm-0" type="submit">
+                <form class="form-inline my-2 my-lg-0" method="GET" action="{{action('HomeController@search')}} ">
+                  <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search" aria-label="Search">
+                  <select name="select" id="searchOption" class="mx-1 select">
+                    <option value="brand">ブランド名</option>
+                    <option value="perfume">香水名</option>
+                  </select>
+                  <button class="btn my-2 my-sm-0 ml-sm-2" type="submit">
                     <svg class="bi bi-search mb-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd" />
                       <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd" />
-                    </svg></button>
+                    </svg>
+                  </button>
+                  @csrf
                 </form>
               </div>
             </nav>

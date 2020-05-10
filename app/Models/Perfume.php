@@ -9,6 +9,13 @@ class Perfume extends Model
   //
   protected $guarded = array('id');
 
+  public static function rules()
+  {
+    return [
+      'name' => 'required|string',
+    ];
+  }
+
   public function brand()
   {
     return $this->belongsTo('App\Models\Brand', 'brand_id');

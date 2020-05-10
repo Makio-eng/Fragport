@@ -15,10 +15,11 @@ class CreateBrandsTable extends Migration
   {
     Schema::create('brands', function (Blueprint $table) {
       $table->id();
+      $table->string('admin_id');
       $table->string('name');
       $table->string('ja_name');
-      $table->string('country');
-      $table->string('body', 500);
+      $table->string('country')->nullable();
+      $table->string('body', 500)->nullable();
       $table->string('brandLogo_path');
       $table->timestamps();
     });

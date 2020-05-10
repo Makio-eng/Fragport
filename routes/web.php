@@ -2,9 +2,12 @@
 //テスト
 Route::get('laravel', 'TestController@laravel')->middleware('auth');
 Route::get('tests/test', 'TestController@index')->middleware('auth');
+Route::get('tests/info', 'TestController@phpinfo')->middleware('auth');
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////// ユーザー /////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 
 
-//////////////////////////////// ユーザー //////////////////////////
 Route::get('login', 'User\Auth\LoginController@showLoginForm')->name('login');
 Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 
@@ -32,12 +35,13 @@ Route::group(['prefix' => '/'], function () {
   Route::get('user/home', 'HomeController@index');
   Route::get('about', 'HomeController@about');
   Route::get('information', 'HomeController@information');
+  Route::get('search', 'HomeController@search');
 });
 
 //ブランド関連
-Route::group(['prefix' => '/brand', 'name' => 'brand'], function () {
+Route::group(['prefix' => '/brand'], function () {
   Route::get('', 'BrandController@index');
-  Route::get('info', 'BrandController@info');
+  Route::get('info', 'BrandController@info')->name('brand.info');
 });
 
 //レビュー関連
@@ -51,6 +55,16 @@ Route::group(['prefix' => 'user/review', 'name' => 'user/review/', 'middleware' 
   Route::post('update', 'User\ReviewController@update');
   Route::post('delete', 'User\ReviewController@delete');
 });
+
+//香水作成関連
+Route::group(['prefix' => 'user/perfume', 'middleware' => 'auth'], function () {
+  Route::get('create', 'User\PerfumeController@add');
+  Route::post('create', 'User\PerfumeController@create');
+  Route::get('edit', 'User\PerfumeController@edit');
+  Route::post('update', 'User\PerfumeController@update');
+  Route::post('delete', 'User\PerfumeController@delete');
+});
+
 
 //プロフィール関連
 Route::group(['prefix' => 'user/profile/', 'middleware' => 'auth'], function () {
@@ -69,7 +83,10 @@ Route::group(['prefix' => 'contact'], function () {
 
 
 
+/////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////// 管理者 ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
   // ログイン認証関連

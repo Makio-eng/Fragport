@@ -4,6 +4,17 @@
   <div class="perfume-name row d-block text-center mb-4">
     <h1 class="mx-auto mb-0">{{ $perfume -> name}}<br>({{ $perfume -> ja_name}})</h1>
   </div>
+
+  @unless(Auth::guest())
+  @if(Auth::id() == $perfume->user_id)
+  <div class="row">
+    <a href="{{action('User\PerfumeController@edit',['id'=>$perfume->id])}}" class="perfume-edit-btn ml-auto">
+      <button type="button" class="btn">香水を編集</button>
+    </a>
+  </div>
+  @endif
+  @endunless
+
   <div class="perfume row">
     <div class="col-md-6 perfume-image py-2">
       @if($perfume->perfumeImage_path == null)
@@ -62,6 +73,8 @@
         <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
+
+
     <!-- Modal -->
     <div class="modal review-modal fade" id="exampleModalCenter{{$review->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -74,12 +87,23 @@
                 </div>
                 <div class="col-lg-5">
                   <div class="user-profile row">
-                    <div class="col-4"><a href="{{action('User\ProfileController@info',['id'=>$review->user->id])}}">
+                    <div class="col-4">
+                      @if(Auth::id() == $review->user_id)
+                      <a href="{{action('User\ProfileController@mypage')}}">
                         @if(optional($review->user->profile)->userImage_path == null)
                         <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
                         @else
                         <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
                         @endif</a>
+
+                      @else
+                      <a href="{{action('User\ProfileController@info',['id'=>$review->user->id])}}">
+                        @if(optional($review->user->profile)->userImage_path == null)
+                        <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+                        @else
+                        <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+                        @endif</a>
+                      @endif
                     </div>
                     <div class="col-8 d-flex align-items-center">
                       <h2 class="user-name">{{$review->user->name}}</h2>
@@ -90,6 +114,7 @@
                       <i class="fas fa-heart mr-2">
                         <p class="text-right d-inline">20</p>
                       </i>
+
                       <i class="far fa-clock">
                         <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
                       </i>

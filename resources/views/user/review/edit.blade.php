@@ -29,7 +29,12 @@
       <div class="review col-8">
         <div class="user-profile row">
           <div class="col-3">
-            <img src="{{asset('storage/images/'.Auth::user()->profile->userImage_path)}}" alt="" class="img-fluid user-image d-block mx-auto my-4">
+            @if(optional(Auth::user()->profile)->userImage_path == null)
+            <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid mx-auto">
+            @else
+            <img src="{{ asset('storage/images/'. Auth::user()->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+            @endif
+
           </div>
           <div class="col-9 d-flex align-items-center">
             <h3 class="user-name">{{ Auth::user()->name}}</h3>

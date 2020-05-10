@@ -19,21 +19,18 @@ class TestController extends Controller
   {
     return view('welcome');
   }
+  public function phpinfo()
+  {
+    echo phpinfo();
+  }
 }
 
 
 
 /*
-
-・ページネーション
-・50音順
 ・スライド
 ・画像加工
-・リダイレクト
 ・いいね
 ・アバウト画面
 ・デプロイ
-・モーダル
-・プロフィール
-・検索機能
 */

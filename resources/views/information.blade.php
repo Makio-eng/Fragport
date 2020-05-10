@@ -7,11 +7,11 @@
   @foreach($informations as $information)
   <div class="information-title row py-2 my-3 border border-shadow">
     <div class="col-md-4">
-      <h3 class="text-center">{{$information->created_at->format('Y/m/d')}}</h3>
+      <h4 class="text-center">{{ date("Y/m/d", strtotime($information->created_at)) }}</h4>
     </div>
 
     <div class="col-md-8">
-      <h3 class="text-center">{{$information->title}}</h3>
+      <h4 class="text-center">{{$information->title}}</h4>
     </div>
 
     <div class="information-contents row">
@@ -20,20 +20,7 @@
   </div>
   @endforeach
 
-  <div class="pagination-area p-5 row justify-content-center">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1">先頭</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">次へ</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="pagination justify-content-center container">
+    {{$informations -> links()}}
   </div>
-</div>
-@endsection
+  @endsection

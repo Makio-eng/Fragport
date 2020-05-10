@@ -3,6 +3,21 @@
     .perfume-name {
         font-family: $main-font;
     }
+    .perfume-edit-btn {
+        .btn {
+            font-family: $main-font;
+            background-color: $main-color;
+            color: white;
+            &:hover {
+                color: white;
+                background-color: darken($main-color, 15%);
+                &:active {
+                    outline: none;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
     .perfume {
         .perfume-about {
             font-family: $main-font;
@@ -70,6 +85,14 @@
     font-family: $main-font;
     .review-create-title {
         @include title-font;
+    }
+    .user-profile {
+        img {
+            border-radius: 50%;
+            width: 140px;
+            border: 2px;
+            border-color: $sub-color;
+        }
     }
 
     .review-form {

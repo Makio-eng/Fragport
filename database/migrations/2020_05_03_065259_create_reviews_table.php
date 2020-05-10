@@ -16,7 +16,7 @@ class CreateReviewsTable extends Migration
     Schema::create('reviews', function (Blueprint $table) {
       $table->id();
       $table->unsignedBigInteger('perfume_id');
-      $table->foreign('perfume_id')->references('id')->on('perfumes');
+      $table->foreign('perfume_id')->references('id')->on('perfumes')->onDelete('cascade');
       $table->unsignedBigInteger('user_id');
       $table->foreign('user_id')->references('id')->on('users');
       $table->integer('likes_count')->default(0);

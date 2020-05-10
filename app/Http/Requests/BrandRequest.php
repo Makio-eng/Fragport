@@ -27,7 +27,7 @@ class BrandRequest extends FormRequest
       //
       'name' => 'required|string',
       'ja_name' => 'required|string',
-      'country' => 'required|string',
+      'country' => 'nullable|string',
       'body' => 'string|nullable',
       'brandLogo' => 'nullable|file|image|mimes:jpeg,png,jpg|max:2048',
     ];

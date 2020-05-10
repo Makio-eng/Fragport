@@ -9,6 +9,9 @@ class Information extends Model
   //
   protected $guarded = array('id');
 
+  protected $dates = [
+    'created_at'
+  ];
   public static $rules = array(
     'title' => 'required',
     'body' => 'required',

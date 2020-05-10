@@ -32,7 +32,7 @@
         </div>
         <div class="form-group align-items-center mx-auto">
           <label for="name" class="text-center mb-0">ユーザーネーム</label>
-          <input type="text" class="form-control form-control-sm" name="name" id="name" value="{{ old('login_name',$user->name) }}">
+          <input type="text" class="form-control form-control-sm" name="name" id="name" value="{{ old('name',$user->name) }}">
         </div>
         <div class="form-group align-items-center mx-auto">
           <label for="Email" class=" mb-0 text-center">メールアドレス</label>

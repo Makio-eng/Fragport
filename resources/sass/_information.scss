@@ -10,12 +10,4 @@
     .information-contents {
         font-size: 16px;
     }
-    .pagination-area {
-        .page-link {
-            color: darken($main-color, 5%);
-        }
-        .disabled {
-            color: $sub-color;
-        }
-    }
 }

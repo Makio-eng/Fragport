@@ -1,0 +1,29 @@
+.perfume-create {
+    font-family: $main-font;
+    .btn {
+        border-color: $main-color;
+        color: $main-color;
+        &:hover {
+            color: white;
+            background-color: lighten($main-color, 10%);
+            border-color: lighten($main-color, 10%);
+            &:active {
+                outline: none;
+                background-color: $main-color;
+            }
+        }
+    }
+    .delete {
+        .btn-del {
+            color: white;
+            &:hover {
+                color: white;
+                background-color: lighten(red, 10%);
+                &:active {
+                    outline: none;
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
