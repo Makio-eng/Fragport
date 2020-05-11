@@ -21,7 +21,7 @@
 
     <div class="review-form row">
       <div class="col-4 p-3">
-        <img src="/storage/nopict.png" alt="" class="img-fluid d-block mx-auto my-4 perfume-pic">
+        <img src="{{asset('storage/materials/nopict.png')}}" alt="" class="img-fluid d-block mx-auto my-4 perfume-pic">
         <input type="file" class="form-control-file" name="reviewImage">
       </div>
 
@@ -29,7 +29,7 @@
         <div class="user-profile row">
           <div class="col-3">
             @if(optional(Auth::user()->profile)->userImage_path == null)
-            <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+            <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
             @else
             <img src="{{ asset('storage/images/'. Auth::user()->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
             @endif

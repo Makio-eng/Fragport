@@ -6,7 +6,7 @@
     <h2 class="mx-auto py-3">検索結果一覧</h2>
   </div>
 
-  <div class="row border p-3">
+  <div class="row border  p-3">
     @if(isset($brands))
 
     <div class="row d-flex align-items-end">

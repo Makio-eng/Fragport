@@ -8,6 +8,7 @@ use App\Models\Perfume;
 use App\Models\Review;
 use App\Http\Requests\ReviewRequest;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 
 class ReviewController extends Controller
@@ -25,6 +26,12 @@ class ReviewController extends Controller
     $form = $request->all();
     $path = $request->file('reviewImage')->store('public/images');
     $review->reviewImage_path = basename($path);
+
+    $reviewThumb = $request->file('reviewImage');
+    $thumb_path = str_random(20) . '.' . $reviewThumb->getClientOriginalExtension();
+    Image::make($reviewThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+    $review->reviewThumb_path = $thumb_path;
+
     unset($form['_token']);
     unset($form['reviewImage']);
     $review->fill($form)->save();
@@ -47,8 +54,14 @@ class ReviewController extends Controller
     if ($request->file('reviewImage')) {
       $path = $request->file('reviewImage')->store('public/images');
       $form['reviewImage_path'] = basename($path);
+
+      $reviewThumb = $request->file('reviewImage');
+      $thumb_path = str_random(20) . '.' . $reviewThumb->getClientOriginalExtension();
+      Image::make($reviewThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      $review->reviewThumb_path = $thumb_path;
     } else {
       $form['reviewImage_path'] = $review->reviewImage_path;
+      $form['reviewThumb_path'] = $review->reviewThumb_path;
     }
     unset($form['reviewImage']);
     unset($form['_token']);

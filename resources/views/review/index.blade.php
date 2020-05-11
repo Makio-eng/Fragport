@@ -18,7 +18,7 @@
   <div class="perfume row">
     <div class="col-md-6 perfume-image py-2">
       @if($perfume->perfumeImage_path == null)
-      <img src="/storage/images/noimage.png" alt="no_image" class="img-fluid mx-auto">
+      <img src="{{ asset('storage/materials/noimage.png') }}" alt="no_image" class="img-fluid mx-auto">
       @else
       <img src="{{ asset('storage/images/'. $perfume -> perfumeImage_path) }}" alt="{{ $perfume -> ja_name}}" class="img-fluid mx-auto">
       @endif
@@ -70,7 +70,7 @@
     @foreach($perfume->reviews as $review)
     <div class="col-4 py-lg-2 review-link">
       <a data-toggle="modal" data-target="#exampleModalCenter{{$review->id}}">
-        <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+        <img src="{{asset('storage/images/'.$review->reviewThumb_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
 
@@ -91,7 +91,7 @@
                       @if(Auth::id() == $review->user_id)
                       <a href="{{action('User\ProfileController@mypage')}}">
                         @if(optional($review->user->profile)->userImage_path == null)
-                        <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+                        <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
                         @else
                         <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
                         @endif</a>

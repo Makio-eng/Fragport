@@ -41,8 +41,8 @@
       <label for="body" class="">説明</label>
       <textarea id="body" class="form-control" name="body" rows="15">{{old('body')}}</textarea>
     </div>
-    <div class="row py-3">
-      <input class="mx-auto" type="file" name="perfumeImage">
+    <div class="row py-3 view_box">
+      <input class="mx-auto" type="file" class="file" name="perfumeImage">
     </div>
     <div class="row">
       <input type="hidden" name="id" value="{{ $brand -> id }}">

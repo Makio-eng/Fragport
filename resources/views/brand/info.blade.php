@@ -29,7 +29,7 @@
     @foreach($brand->perfumes as $perfume)
     <div class="perfume col-4">
       <a class="perfume-link" href="{{ action('ReviewController@index',['id' => $perfume -> id])}}">
-        <img src="{{ asset('storage/images/'. $perfume->perfumeImage_path)}}" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
+        <img src="{{ asset('storage/images/'. $perfume->perfumeThumb_path)}}" class="img-fluid perfume-image d-block mx-auto mb-2 pt-3">
       </a>
       <p class="text-center mb-0">{{ $perfume -> name}}</p>
       <p class="text-center">({{ $perfume -> ja_name}})</p>

@@ -32,7 +32,7 @@
     @foreach($reviews as $review)
     <div class="brand col-4 py-2">
       <a href="{{ action('ReviewController@index',['id'=>$review->perfume_id]) }}" class="">
-        <img src="{{ asset('storage/images/'. $review->reviewImage_path)}}" class="img-fluid d-block mx-auto mb-2">
+        <img src="{{ asset('storage/images/'. $review->reviewThumb_path)}}" class="img-fluid d-block mx-auto mb-2">
       </a>
     </div>
     @endforeach

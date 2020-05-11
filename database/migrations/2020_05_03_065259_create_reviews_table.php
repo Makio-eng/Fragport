@@ -22,6 +22,7 @@ class CreateReviewsTable extends Migration
       $table->integer('likes_count')->default(0);
       $table->string('body', 500);
       $table->string('reviewImage_path');
+      $table->string('reviewThumb_path');
       $table->timestamps();
     });
   }

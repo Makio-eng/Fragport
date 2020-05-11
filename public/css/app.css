@@ -17031,7 +17031,8 @@ readers do not read off random characters that represent icons */
 }
 
 .header .jumbotron-fluid {
-  background-color: #989797;
+  background: #9f9f9f;
+  background: radial-gradient(circle, #9f9f9f 13%, #8e8e8e 88%);
 }
 
 .header .navbar-brand {
@@ -17064,6 +17065,22 @@ readers do not read off random characters that represent icons */
   border-color: #df93e5;
 }
 
+.main-btn {
+  border-color: #df93e5;
+  color: #df93e5;
+}
+
+.main-btn:hover {
+  color: white;
+  background-color: #ebbcef;
+  border-color: #ebbcef;
+}
+
+.main-btn:hover:active {
+  outline: none;
+  background-color: #df93e5;
+}
+
 .footer {
   position: relative;
   bottom: 0;
@@ -17073,7 +17090,8 @@ readers do not read off random characters that represent icons */
 }
 
 .footer .jumbotron-fluid {
-  background-color: #989797;
+  background: #9f9f9f;
+  background: radial-gradient(circle, #9f9f9f 13%, #8e8e8e 88%);
 }
 
 .footer .container {
@@ -17299,13 +17317,6 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
 }
 
-.review-link img {
-  width: 300px;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .review-link img:hover {
   cursor: pointer;
 }
@@ -17321,7 +17332,7 @@ readers do not read off random characters that represent icons */
 
 .review-create .user-profile img {
   border-radius: 50%;
-  width: 140px;
+  width: 160px;
   border: 2px;
   border-color: #808080;
 }
@@ -17433,7 +17444,7 @@ readers do not read off random characters that represent icons */
 
 .user-profile-info .user-image {
   border-radius: 50%;
-  width: 140px;
+  width: 180px;
 }
 
 .user-profile-info .profile-edit-link {

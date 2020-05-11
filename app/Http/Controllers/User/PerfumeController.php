@@ -8,6 +8,7 @@ use App\Models\Perfume;
 use App\Models\Brand;
 use App\Http\Requests\PerfumeRequest;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 
 class PerfumeController extends Controller
@@ -32,8 +33,14 @@ class PerfumeController extends Controller
     if (isset($form['perfumeImage'])) {
       $path = $request->file('perfumeImage')->store('public/images');
       $perfumes->perfumeImage_path = basename($path);
+
+      $perfumeThumb = $request->file('perfumeImage');
+      $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
+      Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      $perfumes->perfumeThumb_path = $thumb_path;
     } else {
       $perfumes->perfumeImage_path = null;
+      $perfumes->perfumeThumb_path = null;
     }
     unset($form['_token']);
     unset($form['perfumeImage']);
@@ -59,9 +66,16 @@ class PerfumeController extends Controller
     if (isset($form['perfumeImage'])) {
       $path = $request->file('perfumeImage')->store('public/images');
       $perfume->perfumeImage_path = basename($path);
+
+      $perfumeThumb = $request->file('perfumeImage');
+      $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
+      Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      $perfume->perfumeThumb_path = $thumb_path;
+
       unset($form['perfumeImage']);
     } else {
       $form['perfumeImage_path'] = $perfume->perfumeImage_path;
+      $form['perfumeThumb_path'] = $perfume->perfumeThumb_path;
     }
     unset($form['_token']);
     unset($form['perfumeImage']);

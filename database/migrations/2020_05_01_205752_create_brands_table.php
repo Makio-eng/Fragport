@@ -19,7 +19,9 @@ class CreateBrandsTable extends Migration
       $table->string('name');
       $table->string('ja_name');
       $table->string('country')->nullable();
+      $table->string('link')->nullable();
       $table->string('body', 500)->nullable();
+      $table->string('posted_at',)->nullable();
       $table->string('brandLogo_path');
       $table->timestamps();
     });

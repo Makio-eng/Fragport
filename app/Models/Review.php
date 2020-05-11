@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
   //
-  protected $guarded = array('id');
+  protected $guarded = array('id', 'thumb');
 
   public function perfume()
   {
@@ -21,6 +21,8 @@ class Review extends Model
   {
     return $this->belongsTo('App\Models\User', 'user_id');
   }
+
+  public $thumb;
 
   public static function rules()
   {

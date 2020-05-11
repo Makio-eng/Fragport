@@ -32,7 +32,7 @@ class HomeController extends Controller
   {
     $informations = Information::all()->sortByDesc('created_at')->take(3);
     $reviews = Review::all()->sortByDesc('created_at')->take(6);
-    $brands = Brand::all()->sortByDesc('created_at')->take(6);
+    $brands = Brand::inRandomOrder()->take(6)->get();
     return view('home', compact('informations', 'brands', 'reviews'));
   }
 
@@ -66,7 +66,6 @@ class HomeController extends Controller
             ->orWhere('ja_name', 'like', '%' . $value . '%')
             ->get();
         }
-        // dd($brands);
         return view('search', compact('brands'));
       } elseif ($request->select == 'perfume') {
 
@@ -77,7 +76,6 @@ class HomeController extends Controller
             ->orWhere('ja_name', 'like', '%' . $value . '%')
             ->get();
         }
-        // dd($perfumes);
         return view('search', compact('perfumes'));
       }
     }

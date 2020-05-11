@@ -13,12 +13,11 @@
       @endforeach
     </ul>
     @endif
-
     <div class="row py-3">
       <div class="col-md-5">
         <div class="row">
           @if(optional($user->profile)->userImage_path == null)
-          <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+          <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
           @else
           <img src="{{ asset('storage/images/'. $user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
           @endif
@@ -40,7 +39,7 @@
         </div>
         <div class="form-group align-items-center mx-auto row">
           <label for="twitter-link" class="col-3 mb-0 sns">
-            <img src="/storage/Twitter.png" class="twitter-logo sns-links ">
+            <img src="{{ asset('storage/materials/Twitter.png') }}" class="twitter-logo sns-links ">
           </label>
           <div class="col-9">
             <input type="text" id="twitter-link" class="form-control form-control-sm" name="twitter" value="{{ optional($user->profile)->twitter}}">
@@ -48,7 +47,7 @@
         </div>
         <div class="form-group align-items-center mx-auto row">
           <label for="instagram-link" class="col-3 mb-0 sns">
-            <img src="/storage/instagram2.png" class="instagram-logo sns-links">
+            <img src="{{ asset('storage/materials/instagram2.png') }}" class="instagram-logo sns-links">
           </label>
           <div class="col-9">
             <input type="text" id="instagram-link" class="form-control form-control-sm" name="instagram" value="{{ optional($user->profile)->instagram}}">
@@ -56,7 +55,7 @@
         </div>
         <div class="form-group align-items-center mx-auto row">
           <label for="facebook-link" class="col-3 mb-0 sns">
-            <img src="/storage/facebook.png" class="facebook-logo sns-links ">
+            <img src="{{ asset('storage/materials/facebook.png') }}" class="facebook-logo sns-links ">
           </label>
           <div class="col-9">
             <input type="text" id="facebook-link" class="form-control form-control-sm" name="facebook" value="{{ optional($user->profile)->facebook}}">

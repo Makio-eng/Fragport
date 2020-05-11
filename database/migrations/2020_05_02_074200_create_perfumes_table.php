@@ -28,6 +28,8 @@ class CreatePerfumesTable extends Migration
       $table->string('perfumer')->nullable();
       $table->string('body', 500)->nullable();
       $table->string('perfumeImage_path')->nullable();
+      $table->string('perfumeThumb_path')->nullable();
+      $table->string('shop_link')->nullable();
       $table->timestamps();
     });
   }

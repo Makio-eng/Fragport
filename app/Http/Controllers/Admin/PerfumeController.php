@@ -8,6 +8,7 @@ use App\Models\Perfume;
 use App\Models\Brand;
 use App\Http\Requests\PerfumeRequest;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class PerfumeController extends Controller
 {
@@ -15,11 +16,6 @@ class PerfumeController extends Controller
   public function info(Request $request)
   {
     $perfume = Perfume::find($request->id);
-    // $path = storage_path('app/images/$perfume->perfumeImage_path');
-    // $thumb = \Image::make($path);
-    // $thumb->crop(300, 300);
-    // $perfume->$thumb;
-    // dd($perfume);
     return view('admin.perfume.info', compact('perfume'));
   }
 
@@ -41,8 +37,15 @@ class PerfumeController extends Controller
     if (isset($form['perfumeImage'])) {
       $path = $request->file('perfumeImage')->store('public/images');
       $perfumes->perfumeImage_path = basename($path);
+      ////////////サムネイル用↓
+      $perfumeThumb = $request->file('perfumeImage');
+      $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
+      Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      $perfumes->perfumeThumb_path = $thumb_path;
+      ////////////////////
     } else {
       $perfumes->perfumeImage_path = null;
+      $perfumes->perfumeThumb_path = null;
     }
     unset($form['_token']);
     unset($form['perfumeImage']);
@@ -68,9 +71,16 @@ class PerfumeController extends Controller
     if (isset($form['perfumeImage'])) {
       $path = $request->file('perfumeImage')->store('public/images');
       $perfume->perfumeImage_path = basename($path);
+      /////////////サムネイル
+      $perfumeThumb = $request->file('perfumeImage');
+      $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
+      Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      $perfume->perfumeThumb_path = $thumb_path;
+      /////////////////////
       unset($form['perfumeImage']);
     } elseif (isset($request->remove)) {
       $perfume->perfumeImage_path = null;
+      $perfume->perfumeThumb_path = null;
       unset($form['remove']);
     }
     unset($form['_token']);

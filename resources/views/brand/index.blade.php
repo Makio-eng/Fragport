@@ -22,7 +22,7 @@
           <div class="card-body row  d-flex align-items-end">
             @foreach($brands['ア'] as $brand)
             <div class="brand col-4 py-3">
-              <div class="row px-3">
+              <div class="row px-3 ">
                 <a href="{{action ('BrandController@info',['id' => $brand->id])}}" class="brand-link">
                   <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
@@ -49,7 +49,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-k" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample1">
+        <div id="brand-k" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample1">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['カ'] as $brand)
             <div class="brand col-4 py-3">
@@ -80,7 +80,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-s" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample2">
+        <div id="brand-s" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample2">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['サ'] as $brand)
             <div class="brand col-4 py-3">
@@ -111,7 +111,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-t" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample3">
+        <div id="brand-t" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample3">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['タ'] as $brand)
             <div class="brand col-4 py-3">
@@ -142,7 +142,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-n" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample4">
+        <div id="brand-n" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample4">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['ナ'] as $brand)
             <div class="brand col-4 py-3">
@@ -173,7 +173,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-h" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample5">
+        <div id="brand-h" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample5">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['ハ'] as $brand)
             <div class="brand col-4 py-3">
@@ -205,7 +205,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-m" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample6">
+        <div id="brand-m" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample6">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['マ'] as $brand)
             <div class="brand col-4 py-3">
@@ -237,7 +237,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-y" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample7">
+        <div id="brand-y" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample7">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['ヤ'] as $brand)
             <div class="brand col-4 py-3">
@@ -269,7 +269,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-r" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample8">
+        <div id="brand-r" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample8">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['ラ'] as $brand)
             <div class="brand col-4 py-3">
@@ -301,7 +301,7 @@
             </button>
           </h5>
         </div>
-        <div id="brand-w" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample9">
+        <div id="brand-w" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample9">
           <div class="card-body row d-flex align-items-end">
             @foreach($brands['ワ'] as $brand)
             <div class="brand col-4 py-3">
