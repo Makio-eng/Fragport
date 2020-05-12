@@ -27,14 +27,49 @@
       <label for="body" class="">説明</label>
       <textarea id="body" class="form-control" name="body" rows="15"></textarea>
     </div>
-    <div class="row py-3">
-      <input class="mx-auto" type="file" name="brandLogo">
+    <div id="file-preview" class="container">
+      <div class="row">
+        <div class="col-4 offset-4">
+          <img class="border img-fluid my-2" v-bind:src="imageData" v-if="imageData">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="form-label file_btn btn btn-dark mx-auto" for="perfumeImage">写真を選択</label>
+        <input class="form-input d-none" type="file" name="perfumeImage" id="perfumeImage" accept="image/*" v-on:change="onFileChange">
+      </div>
     </div>
     <div class="row">
       <input class="btn btn-primary mx-auto" type="submit" value="新規作成">
     </div>
     @csrf
   </form>
+  @endsection
 
-</div>
-@endsection
+  @section('js')
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#file-preview',
+      data: {
+        imageData: '' //画像格納用変数
+      },
+      methods: {
+        onFileChange(e) {
+          const files = e.target.files;
+
+          if (files.length > 0) {
+
+            const file = files[0];
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+              this.imageData = e.target.result;
+
+            };
+            reader.readAsDataURL(file);
+          }
+        }
+      }
+    });
+  </script>
+  @endsection

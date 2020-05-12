@@ -14,21 +14,33 @@
     </ul>
     @endif
     <div class="row py-3">
+
       <div class="col-md-5">
-        <div class="row">
+        <div class="row py-1">
+          <input type="checkbox" class="form-check-input" name="remove" value="true">
+          設定中の画像を削除
+        </div>
+
+        <div class="row mb-2">
           @if(optional($user->profile)->userImage_path == null)
           <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
           @else
           <img src="{{ asset('storage/images/'. $user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
           @endif
         </div>
-        <div class="row">
-          <input type="file" class="form-control-file" name="userImage" value="{{ optional($user->profile)->userImage_path }}">
+        <div id="file-preview" class="container">
+          <div class="form-group row">
+            <label class="form-label file_btn btn-lg btn mx-auto" for="userImage">写真を選択</label>
+            <input class="form-input d-none" type="file" name="userImage" id="userImage" accept="image/*" v-on:change="onFileChange">
+          </div>
+          <p class="pt-2 mb-0">選択中:</p>
+          <div class="row">
+            <img class="img-fluid mx-auto my-2" v-bind:src="imageData" v-if="imageData">
+          </div>
+
         </div>
-        <div class="row">
-          <input type="checkbox" class="form-check-input" name="remove" value="true">
-          画像を削除
-        </div>
+
+
         <div class="form-group align-items-center mx-auto">
           <label for="name" class="text-center mb-0">ユーザーネーム</label>
           <input type="text" class="form-control form-control-sm" name="name" id="name" value="{{ old('name',$user->name) }}">
@@ -93,4 +105,33 @@
     @csrf
   </form>
 </div>
+@endsection
+
+@section('js')
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#file-preview',
+    data: {
+      imageData: '' //画像格納用変数
+    },
+    methods: {
+      onFileChange(e) {
+        const files = e.target.files;
+
+        if (files.length > 0) {
+
+          const file = files[0];
+          const reader = new FileReader();
+
+          reader.onload = (e) => {
+            this.imageData = e.target.result;
+
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    }
+  });
+</script>
 @endsection

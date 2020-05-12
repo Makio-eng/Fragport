@@ -19,12 +19,19 @@
 
     </div>
 
-    <div class="review-form row">
+    <div class="review-form row d-flex align-items-center">
       <div class="col-4 p-3">
-        <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
-        <p class="mb-1">写真の変更</p>
-        <input type="file" class="form-control-file" name="reviewImage">
-
+        <div id="file-preview" class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="border img-fluid my-2" v-bind:src="imageData" v-if="imageData">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="form-label file_btn btn-lg btn mx-auto" for="reviewImage">写真を選択</label>
+            <input class="form-input d-none" type="file" name="reviewImage" id="reviewImage" accept="image/*" v-on:change="onFileChange">
+          </div>
+        </div>
       </div>
       <div class="review col-8">
         <div class="user-profile row">
@@ -71,6 +78,32 @@
         return false;
       }
     });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#file-preview',
+    data: {
+      imageData: '' //画像格納用変数
+    },
+    methods: {
+      onFileChange(e) {
+        const files = e.target.files;
+
+        if (files.length > 0) {
+
+          const file = files[0];
+          const reader = new FileReader();
+
+          reader.onload = (e) => {
+            this.imageData = e.target.result;
+
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    }
   });
 </script>
 @endsection

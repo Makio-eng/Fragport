@@ -119,6 +119,20 @@
             }
         }
     }
+    .file_btn {
+        border-color: #b0c4de;
+        color: #b0c4de;
+
+        &:hover {
+            background-color: darken(#b0c4de, 10%);
+            color: white;
+            border-color: darken(#b0c4de, 10%);
+            &:active {
+                background-color: #b0c4de;
+                border-color: #b0c4de;
+            }
+        }
+    }
     .delete {
         .btn-del {
             color: white;

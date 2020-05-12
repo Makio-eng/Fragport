@@ -17365,6 +17365,22 @@ readers do not read off random characters that represent icons */
   background-color: #DF93E5;
 }
 
+.review-create .file_btn {
+  border-color: #b0c4de;
+  color: #b0c4de;
+}
+
+.review-create .file_btn:hover {
+  background-color: #8ca9cf;
+  color: white;
+  border-color: #8ca9cf;
+}
+
+.review-create .file_btn:hover:active {
+  background-color: #b0c4de;
+  border-color: #b0c4de;
+}
+
 .review-create .delete .btn-del {
   color: white;
 }
@@ -17550,6 +17566,22 @@ readers do not read off random characters that represent icons */
   border-color: #DF93E5;
 }
 
+.user-profile-edit .file_btn {
+  border-color: #b0c4de;
+  color: #b0c4de;
+}
+
+.user-profile-edit .file_btn:hover {
+  background-color: #8ca9cf;
+  color: white;
+  border-color: #8ca9cf;
+}
+
+.user-profile-edit .file_btn:hover:active {
+  background-color: #b0c4de;
+  border-color: #b0c4de;
+}
+
 .contact-form-head .contact-form-title {
   font-family: "Noto Serif JP", sans-serif;
   color: black;
@@ -17625,6 +17657,22 @@ readers do not read off random characters that represent icons */
 .perfume-create .btn:hover:active {
   outline: none;
   background-color: #DF93E5;
+}
+
+.perfume-create .file_btn {
+  border-color: #b0c4de;
+  color: #b0c4de;
+}
+
+.perfume-create .file_btn:hover {
+  background-color: #8ca9cf;
+  color: white;
+  border-color: #8ca9cf;
+}
+
+.perfume-create .file_btn:hover:active {
+  background-color: #b0c4de;
+  border-color: #b0c4de;
 }
 
 .perfume-create .delete .btn-del {
