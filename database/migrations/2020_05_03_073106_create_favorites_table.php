@@ -21,7 +21,7 @@ class CreateFavoritesTable extends Migration
       $table->unsignedBigInteger('review_id');
       // $table->foreign('review_id')->references('id')->on('reviews')->onDelete('cascade');
 
-      $table->unique(['user_id', 'review_id']);
+      // $table->unique(['user_id', 'review_id']);
       $table->timestamps();
     });
   }

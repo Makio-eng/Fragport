@@ -87,7 +87,13 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="container-fluid">
-              <div class="row py-3">
+              <div class="row">
+                <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="row pb-3">
                 <div class="col-lg-7">
                   <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
                 </div>

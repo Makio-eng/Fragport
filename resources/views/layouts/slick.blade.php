@@ -59,7 +59,7 @@
     $('.single-item').slick({
       centerMode: true,
       autoplay: true,
-      autoplayspeed: 2000,
+      autoplayspeed: 10,
       centerPadding: '60px',
       slidesToShow: 3,
       responsive: [{

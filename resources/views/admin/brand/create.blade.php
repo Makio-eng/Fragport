@@ -34,8 +34,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="form-label file_btn btn btn-dark mx-auto" for="perfumeImage">写真を選択</label>
-        <input class="form-input d-none" type="file" name="perfumeImage" id="perfumeImage" accept="image/*" v-on:change="onFileChange">
+        <label class="form-label file_btn btn btn-dark mx-auto" for="brandLogo">写真を選択</label>
+        <input class="form-input d-none" type="file" name="brandLogo" id="brandLogo" accept="image/*" v-on:change="onFileChange">
       </div>
     </div>
     <div class="row">

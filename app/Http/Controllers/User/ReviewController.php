@@ -18,6 +18,7 @@ class ReviewController extends Controller
     $perfume = Perfume::find($request->id);
     return view('user.review.create', compact('perfume'));
   }
+
   public function create(ReviewRequest $request)
   {
     $review = new Review;

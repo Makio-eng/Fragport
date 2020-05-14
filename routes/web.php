@@ -13,6 +13,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 
   Route::get('login', 'User\Auth\LoginController@showLoginForm')->name('login');
 
+
   // ログイン認証関連
   Auth::routes([
     'register' => true,
@@ -27,7 +28,6 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
     Route::resource('home', 'HomeController', ['only' => 'index']);
   });
 });
-
 
 //ホーム画面
 Route::group(['prefix' => '/'], function () {
@@ -81,7 +81,9 @@ Route::group(['prefix' => 'contact'], function () {
   Route::post('process', 'ContactController@process')->name('contact.process');
 });
 
-
+//いいね関連
+Route::post('/reviews/favorites/create', 'FavoriteController@store')->middleware('auth');
+Route::post('/reviews/favorotes/delete', 'FavoriteController@destroy')->middleware('auth');
 
 /////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////// 管理者 ////////////////////////////////////
@@ -142,6 +144,3 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     });
   });
 });
-
-// Route::post('/posts/{post}/likes', 'FavoriteController@store');
-// Route::post('/posts/{post}/likes/{like}', 'FavoriteController@destroy');

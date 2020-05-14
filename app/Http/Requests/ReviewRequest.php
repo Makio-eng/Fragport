@@ -25,7 +25,7 @@ class ReviewRequest extends FormRequest
   {
     return [
       'body' => 'required|string',
-      'reviewImage' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+      'reviewImage' => 'required|file|image|mimes:jpeg,png,jpg|'
       //
     ];
   }

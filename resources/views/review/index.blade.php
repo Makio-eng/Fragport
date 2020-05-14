@@ -66,22 +66,30 @@
       </svg>
     </a>
   </div>
+
   <div class="user-review-list row">
     @foreach($perfume->reviews as $review)
     <div class="col-4 py-lg-2 review-link">
       <a data-toggle="modal" data-target="#exampleModalCenter{{$review->id}}">
-        <img src="{{asset('storage/images/'.$review->reviewThumb_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+        <img src="{{asset('storage/images/'.$review->reviewThumb_path)}}" alt="" class="img-fluid d-block mx-auto my-3">
       </a>
     </div>
 
 
     <!-- Modal -->
+
     <div class="modal review-modal fade" id="exampleModalCenter{{$review->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body">
             <div class="container-fluid">
-              <div class="row py-3">
+              <div class="row">
+                <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="row pb-3">
                 <div class="col-lg-7">
                   <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
                 </div>
@@ -111,10 +119,19 @@
                   </div>
                   <div class="likedate row">
                     <div class="col text-right">
-                      <i class="fas fa-heart mr-2">
-                        <p class="text-right d-inline">20</p>
-                      </i>
-
+                      @if(!$review->is_favorite($review->id))
+                      <form action="{{ action('FavoriteController@store',['id'=>$review->id]) }}" method="post">
+                        <input type="submit" value="&#xf004;" class="far">
+                        <p class="text-right d-inline">{{count($review->favorites)}}</p>
+                        @csrf
+                      </form>
+                      @else
+                      <form action="{{ action('FavoriteController@destroy',['id'=>$review->id]) }}" method="post">
+                        <input type="submit" value="&#xf004;" class="fas">
+                        <p class="text-right d-inline">{{count($review->favorites)}}</p>
+                        @csrf
+                      </form>
+                      @endif
                       <i class="far fa-clock">
                         <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
                       </i>
@@ -136,6 +153,10 @@
     <!-- ModalEnd -->
 
     @endforeach
+    <div class="pagination justify-content-center container">
+      {{$reviews -> links()}}
+    </div>
+
   </div>
 
   @endsection
