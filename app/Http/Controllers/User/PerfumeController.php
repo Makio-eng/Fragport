@@ -42,6 +42,20 @@ class PerfumeController extends Controller
       $perfumes->perfumeImage_path = null;
       $perfumes->perfumeThumb_path = null;
     }
+    if ($request->select == 'パルファン/Parfum') {
+      $rate = 'パルファン/Parfum';
+      $perfumes->rate = $rate;
+    } elseif ($request->select == 'オードパルファン/Eau de Parfum') {
+      $rate = 'オードパルファン/Eau de Parfum';
+      $perfumes->rate = $rate;
+    } elseif ($request->select == 'オードトワレ/Eau de Toilette') {
+      $rate = 'オードトワレ/Eau de Toilette';
+      $perfumes->rate = $rate;
+    } elseif ($request->select == 'オーデコロン/Eau de Cologne') {
+      $rate = 'オーデコロン/Eau de Cologne';
+      $perfumes->rate = $rate;
+    }
+    unset($form['select']);
     unset($form['_token']);
     unset($form['perfumeImage']);
     $perfumes->fill($form);
@@ -77,6 +91,21 @@ class PerfumeController extends Controller
       $form['perfumeImage_path'] = $perfume->perfumeImage_path;
       $form['perfumeThumb_path'] = $perfume->perfumeThumb_path;
     }
+
+    if ($request->select == 'パルファン/Parfum') {
+      $rate = 'パルファン/Parfum';
+      $perfume->rate = $rate;
+    } elseif ($request->select == 'オードパルファン/Eau de Parfum') {
+      $rate = 'オードパルファン/Eau de Parfum';
+      $perfume->rate = $rate;
+    } elseif ($request->select == 'オードトワレ/Eau de Toilette') {
+      $rate = 'オードトワレ/Eau de Toilette';
+      $perfume->rate = $rate;
+    } elseif ($request->select == 'オーデコロン/Eau de Cologne') {
+      $rate = 'オーデコロン/Eau de Cologne';
+      $perfume->rate = $rate;
+    }
+    unset($form['select']);
     unset($form['_token']);
     unset($form['perfumeImage']);
     unset($form['id']);

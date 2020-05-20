@@ -81,4 +81,13 @@ class HomeController extends Controller
     }
     return view('search');
   }
+
+  public function privacy()
+  {
+    return view('privacy');
+  }
+  public function disclimer()
+  {
+    return view('disclimer');
+  }
 }

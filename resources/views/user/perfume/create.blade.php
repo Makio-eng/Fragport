@@ -23,7 +23,13 @@
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="rate" class="">賦香率</label>
-      <input type="text" class="form-control" id="rate" name="rate" value="{{old('rate')}}">
+      <select name="select" class="form-control text-center">
+        <option velue="">選択してください</option>
+        <option velue="パルファン/Parfum">パルファン/Parfum</option>
+        <option velue="オードパルファン/Eau de Parfum">オードパルファン/Eau de Parfum</option>
+        <option velue="オードトワレ/Eau de Toilette">オードトワレ/Eau de Toilette</option>
+        <option velue="オーデコロン/Eau de Cologne">オーデコロン/Eau de Cologne</option>
+      </select>
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="note" class="">香調</label>

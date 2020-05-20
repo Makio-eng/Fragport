@@ -12,7 +12,7 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -20,6 +20,13 @@
   <!-- Styles -->
   <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+  <!-- slick -->
+  <link rel="stylesheet" href="{{ asset('css/slick-theme.css')}}" type="text/css">
+  <link rel="stylesheet" href="{{ asset('css/slick.css')}}" type="text/css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{{ asset('js/slick.min.js')}}" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -75,10 +82,10 @@
       <div class="jumbotron-fluid">
         <div class="container">
           <div class="sns-link mb-3">
-            <a href="#" class="twitter-link"><i class="fab fa-fw fa-twitter"></i>Twitter</a><br>
-            <a href="#" class="insta-link"><i class="fab fa-fw  fa-instagram"></i>Instagram</a>
+            <a href="#" class="twitter-link text-white"><i class="fab fa-fw fa-twitter"></i>Twitter</a><br>
+            <a href="#" class="insta-link text-white"><i class="fab fa-fw  fa-instagram"></i>Instagram</a>
           </div>
-          <small><a href="#" class="privacy">プライバシーポリシー</a>/<a href="#" class="disclimer">免責事項</a></small><br>
+          <small><a href="{{url('/privacy')}}" class="privacy text-white">プライバシーポリシー</a>/<a href="{{url('/disclimer')}}" class="disclimer text-white">免責事項</a></small><br>
           <small>&copy;2020 Makio-eng</small>
         </div>
       </div>

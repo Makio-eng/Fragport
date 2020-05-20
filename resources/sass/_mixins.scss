@@ -1,9 +1,83 @@
-.card-header {
+$main-color: #df93e5;
+$sub-color: #b4cce3;
+$main-font: "Noto Serif JP", sans-serif;
+@mixin title-font {
     font-family: $main-font;
+    color: black;
 }
-.form-group {
-    font-family: $main-font;
+@mixin main-btn {
+    border-color: $main-color;
+    color: $main-color;
+    font-weight: bolder;
+    &:hover {
+        color: white;
+        background-color: lighten($main-color, 10%);
+        border-color: lighten($main-color, 10%);
+        &:active {
+            outline: none;
+            background-color: $main-color;
+            border-color: $main-color;
+        }
+    }
 }
+@mixin sub_btn {
+    border-color: $sub-color;
+    color: $sub-color;
+
+    &:hover {
+        background-color: darken($sub-color, 10%);
+        color: white;
+        border-color: darken($sub-color, 10%);
+        &:active {
+            background-color: $sub-color;
+            border-color: $sub-color;
+        }
+    }
+}
+
+@mixin gradient {
+    background: linear-gradient(270deg, #df93e5, #80b2e3);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
 @mixin gradientBg($startColor, $endColor) {
     background: $startColor;
     background: -moz-linear-gradient(
@@ -68,6 +142,12 @@ button {
         transform-style: preserve-3d;
         transition: all 0.3s ease-out;
     }
+    i {
+        margin-top: -1px;
+        margin-right: 20px;
+        font-size: 1.265em;
+        vertical-align: middle;
+    }
     span {
         display: inline-block;
         padding: 10px 40px;
@@ -122,9 +202,4 @@ button {
             }
         }
     }
-}
-
-.auth-header {
-    color: white;
-    @include gradientBg($main-color, #abdafc);
 }

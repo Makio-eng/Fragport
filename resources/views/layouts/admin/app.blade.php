@@ -31,7 +31,7 @@
 
 <body>
   <div id="app">
-    <header class="admin-header bg-info">
+    <header class="admin-header bg-danger">
       <div class="jumbotron-fluid">
         <div class="container-fluid">
           <div class="navbar row p-0">
@@ -119,7 +119,7 @@
             </div>
           </div>
           <div class="row">
-            <small class="mx-auto"><a href="#" class="privacy text-dark">プライバシーポリシー</a>/<a href="#" class="disclimer text-dark">免責事項</a></small>
+            <small class="mx-auto"><a href="{{url('/privacy')}}" class="privacy text-dark">プライバシーポリシー</a>/<a href="{{url('/disclimer')}}" class="disclimer text-dark">免責事項</a></small>
           </div>
           <div class="row">
             <small class="mx-auto text-dark">&copy;2020 Makio-eng</small>

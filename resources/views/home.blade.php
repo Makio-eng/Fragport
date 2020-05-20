@@ -2,20 +2,36 @@
 
 
 @section('content')
+
+<div class="container top-image">
+  <h2 class="top-text">「あなたの香りを<br>　綴りませんか」</h2>
+</div>
+
+<div class="container about-link my-3">
+  <div class="row shadow">
+    <div class="col-4 text-center d-flex align-items-center">
+      <h2 class=" mx-auto">about<br><span class="fragport">Fragport</span></h2>
+    </div>
+    <div class="col-8 px-0"><a href="{{url('/about')}}" class="">
+        <img src="{{asset('storage/materials/about_01.jpeg')}}" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
+</div>
 <!-- インフォメーション関連 -->
 <div class="container">
-  <div class="information container my-5 border border-secondary shadow">
+  <div class="information container my-5 shadow">
     <div class="contents-logo mb-3 row">
-      <h1 class="mx-auto">Information</h1>
+      <h2 class="mx-auto">Information</h2>
     </div>
     @foreach ($informations as $information)
 
     <div class="row">
       <div class="col-4">
-        <p class="text-center">{{$information->created_at->format('Y-m-d')}}</p>
+        <p class="text-center border-bottom w-md-50 mx-auto">{{$information->created_at->format('Y/m/d')}}</p>
       </div>
       <div class="col-8">
-        <p class=information-link>{{$information->title}}</p>
+        <p class="information-link b-line">{{$information->title}}</p>
       </div>
     </div>
     @endforeach
@@ -25,9 +41,9 @@
   </div>
 
   <!-- NewPost関連 -->
-  <div class="new-post container my-5 border border-secondary shadow">
+  <div class="new-post container my-5  shadow">
     <div class="contents-logo mb-3 row">
-      <h1 class="mx-auto">New Post</h1>
+      <h2 class="mx-auto">New Post</h2>
     </div>
     <div class="new-posts row d-flex align-items-end">
       @foreach($reviews as $review)
@@ -41,9 +57,9 @@
   </div>
 
   <!-- ブランドリスト関連 -->
-  <div class="brandlist container my-5 border border-secondary shadow">
+  <div class="brandlist container my-5  shadow">
     <div class="contents-logo mb-3 row">
-      <h1 class="mx-auto">Bland List</h1>
+      <h2 class="mx-auto">Bland List</h2>
     </div>
     <div class="row d-flex align-items-end">
       @foreach($brands as $brand)

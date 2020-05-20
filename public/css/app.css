@@ -16963,25 +16963,6 @@ readers do not read off random characters that represent icons */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?c20b5b7362d8d7bb7eddf94344ace33e) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?f89ea91ecd1ca2db7e09baa2c4b156d1) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?db78b9359171f24936b16d84f63af378) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?89ffa3aba80d30ee0a9371b25c968bbb) format("svg");
-}
-
-.far {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400;
-}
-
-/*!
- * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?a0369ea57eb6d3843d6474c035111f29);
@@ -16992,6 +16973,25 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
+}
+
+/*!
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?261d666b0147c6c5cda07265f98b8f8c) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?c20b5b7362d8d7bb7eddf94344ace33e) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?f89ea91ecd1ca2db7e09baa2c4b156d1) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?db78b9359171f24936b16d84f63af378) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?89ffa3aba80d30ee0a9371b25c968bbb) format("svg");
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
 }
 
 /*!
@@ -17013,12 +17013,130 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+.bg-gradient1 span,
+.bg-gradient1:before {
+  background: #df93e5;
+  background: linear-gradient(to right, #df93e5 0%, #abdafc 70%, #abdafc 100%);
+}
+
+.auth-btn {
+  margin: 5% auto;
+  text-align: center;
+}
+
+button {
+  border: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+  border: none;
+}
+
+/* fancy Button */
+
+.fancy-button {
+  display: inline-block;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+
+.fancy-button:before {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  border-radius: 30em;
+  -webkit-filter: blur(20px) brightness(0.95);
+          filter: blur(20px) brightness(0.95);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+
+.fancy-button i {
+  margin-top: -1px;
+  margin-right: 20px;
+  font-size: 1.265em;
+  vertical-align: middle;
+}
+
+.fancy-button span {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+
+.fancy-button:focus,
+.fancy-button:active {
+  color: #ffffff;
+}
+
+.fancy-button:hover {
+  color: #ffffff;
+}
+
+.fancy-button:hover span {
+  -webkit-filter: brightness(1.05) contrast(1.05);
+          filter: brightness(1.05) contrast(1.05);
+  transform: scale(0.95);
+}
+
+.fancy-button:hover:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+}
+
+.fancy-button.pop-onhover:before {
+  opacity: 0;
+  bottom: 10px;
+}
+
+.fancy-button.pop-onhover:hover:before {
+  bottom: -7px;
+  opacity: 1;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+.fancy-button.pop-onhover:hover span {
+  transform: scale(1.04);
+}
+
+.fancy-button.pop-onhover:hover:active span {
+  -webkit-filter: brightness(1) contrast(1);
+          filter: brightness(1) contrast(1);
+  transform: scale(1);
+  transition: all 0.15s ease-out;
+}
+
+.fancy-button.pop-onhover:hover:active:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+  transition: all 0.2s ease-out;
+}
+
 .pagination .page-link {
   color: #d97ee0;
 }
 
 .pagination .disabled {
-  color: #989797;
+  color: #b4cce3;
 }
 
 .pagination .now {
@@ -17031,8 +17149,7 @@ readers do not read off random characters that represent icons */
 }
 
 .header .jumbotron-fluid {
-  background: #9f9f9f;
-  background: radial-gradient(circle, #9f9f9f 13%, #8e8e8e 88%);
+  background-color: #b4cce3;
 }
 
 .header .navbar-brand {
@@ -17055,12 +17172,18 @@ readers do not read off random characters that represent icons */
 
 .header .btn {
   color: white;
-  background-color: #ebbcef;
-  border-color: #ebbcef;
+  background-color: #df93e5;
+  border-color: #df93e5;
 }
 
-.header .btn:active {
+.header .btn:hover {
   outline: none;
+  background-color: #d36adb;
+  border-color: #d36adb;
+}
+
+.header .btn:hover:active {
+  color: white;
   background-color: #df93e5;
   border-color: #df93e5;
 }
@@ -17068,6 +17191,7 @@ readers do not read off random characters that represent icons */
 .main-btn {
   border-color: #df93e5;
   color: #df93e5;
+  font-weight: bolder;
 }
 
 .main-btn:hover {
@@ -17079,19 +17203,35 @@ readers do not read off random characters that represent icons */
 .main-btn:hover:active {
   outline: none;
   background-color: #df93e5;
+  border-color: #df93e5;
+}
+
+.sub-btn {
+  border-color: #b4cce3;
+  color: #b4cce3;
+}
+
+.sub-btn:hover {
+  background-color: #8fb3d5;
+  color: white;
+  border-color: #8fb3d5;
+}
+
+.sub-btn:hover:active {
+  background-color: #b4cce3;
+  border-color: #b4cce3;
 }
 
 .footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #989797;
+  background-color: #b4cce3;
   text-align: center;
 }
 
 .footer .jumbotron-fluid {
-  background: #9f9f9f;
-  background: radial-gradient(circle, #9f9f9f 13%, #8e8e8e 88%);
+  background-color: #b4cce3;
 }
 
 .footer .container {
@@ -17104,26 +17244,15 @@ readers do not read off random characters that represent icons */
 
 .footer .sns-link a {
   font-size: 20px;
-  color: white;
   font-family: "Noto Serif JP", sans-serif;
   padding-top: 4px;
 }
 
 .footer .sns-link i {
-  color: white;
   margin-right: 1px;
 }
 
-.footer .privacy {
-  color: white;
-}
-
-.footer .disclimer {
-  color: white;
-}
-
 .footer small {
-  color: white;
   font-family: "Noto Serif JP", sans-serif;
   text-align: center;
 }
@@ -17136,9 +17265,60 @@ readers do not read off random characters that represent icons */
   font-family: Comic Sans MS;
 }
 
+.terms {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.top-image {
+  background-image: url(/images/head_03.jpeg?602949e1cdc01a7640a93cdf865e9438);
+  background-size: cover;
+  width: 100%;
+  padding-top: 35%;
+  font-family: "Noto Serif JP", sans-serif;
+  color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.top-image .top-text {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.about-link {
+  background-color: #fff5fd;
+}
+
+.about-link h2 {
+  font-family: palatino;
+}
+
+.about-link h2 span {
+  font-family: palatino;
+  color: #df93e5;
+}
+
+.b-line {
+  position: relative;
+  padding: 0.3em;
+}
+
+.b-line:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to left, #b4cce3, transparent);
+}
+
 .information {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 18px;
+}
+
+.information a {
+  font-size: 16px;
 }
 
 .contents-logo {
@@ -17175,6 +17355,123 @@ readers do not read off random characters that represent icons */
 
 .form-group {
   font-family: "Noto Serif JP", sans-serif;
+}
+
+.bg-gradient1 span,
+.bg-gradient1:before {
+  background: #df93e5;
+  background: linear-gradient(to right, #df93e5 0%, #abdafc 70%, #abdafc 100%);
+}
+
+.auth-btn {
+  margin: 5% auto;
+  text-align: center;
+}
+
+button {
+  border: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+  border: none;
+}
+
+/* fancy Button */
+
+.fancy-button {
+  display: inline-block;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+
+.fancy-button:before {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  border-radius: 30em;
+  -webkit-filter: blur(20px) brightness(0.95);
+          filter: blur(20px) brightness(0.95);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+
+.fancy-button span {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+
+.fancy-button:focus,
+.fancy-button:active {
+  color: #ffffff;
+}
+
+.fancy-button:hover {
+  color: #ffffff;
+}
+
+.fancy-button:hover span {
+  -webkit-filter: brightness(1.05) contrast(1.05);
+          filter: brightness(1.05) contrast(1.05);
+  transform: scale(0.95);
+}
+
+.fancy-button:hover:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+}
+
+.fancy-button.pop-onhover:before {
+  opacity: 0;
+  bottom: 10px;
+}
+
+.fancy-button.pop-onhover:hover:before {
+  bottom: -7px;
+  opacity: 1;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+.fancy-button.pop-onhover:hover span {
+  transform: scale(1.04);
+}
+
+.fancy-button.pop-onhover:hover:active span {
+  -webkit-filter: brightness(1) contrast(1);
+          filter: brightness(1) contrast(1);
+  transform: scale(1);
+  transition: all 0.15s ease-out;
+}
+
+.fancy-button.pop-onhover:hover:active:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+  transition: all 0.2s ease-out;
+}
+
+.auth-header {
+  color: white;
+  background: #df93e5;
+  background: linear-gradient(to right, #df93e5 0%, #abdafc 70%, #abdafc 100%);
 }
 
 .information .information-logo {
@@ -17263,7 +17560,7 @@ readers do not read off random characters that represent icons */
 
 .perfumeindex-header .perfume-edit-btn .btn {
   font-family: "Noto Serif JP", sans-serif;
-  background-color: #DF93E5;
+  background-color: #df93e5;
   color: white;
 }
 
@@ -17274,7 +17571,7 @@ readers do not read off random characters that represent icons */
 
 .perfumeindex-header .perfume-edit-btn .btn:hover:active {
   outline: none;
-  background-color: #DF93E5;
+  background-color: #df93e5;
 }
 
 .perfumeindex-header .perfume .perfume-about {
@@ -17299,7 +17596,7 @@ readers do not read off random characters that represent icons */
 
 .review-list-title .bi {
   font-size: 40px;
-  color: #DF93E5;
+  color: #df93e5;
 }
 
 .review-list-title .bi:hover {
@@ -17334,14 +17631,14 @@ readers do not read off random characters that represent icons */
   border-radius: 50%;
   width: 160px;
   border: 2px;
-  border-color: #808080;
+  border-color: #b4cce3;
 }
 
 .review-create .review-form .user-image {
   border-radius: 50%;
   width: 140px;
   border: 2px;
-  border-color: #808080;
+  border-color: #b4cce3;
 }
 
 .review-create .review-form .review-body textarea {
@@ -17350,8 +17647,9 @@ readers do not read off random characters that represent icons */
 }
 
 .review-create .btn {
-  border-color: #DF93E5;
-  color: #DF93E5;
+  border-color: #df93e5;
+  color: #df93e5;
+  font-weight: bolder;
 }
 
 .review-create .btn:hover {
@@ -17362,23 +17660,24 @@ readers do not read off random characters that represent icons */
 
 .review-create .btn:hover:active {
   outline: none;
-  background-color: #DF93E5;
+  background-color: #df93e5;
+  border-color: #df93e5;
 }
 
 .review-create .file_btn {
-  border-color: #b0c4de;
-  color: #b0c4de;
+  border-color: #b4cce3;
+  color: #b4cce3;
 }
 
 .review-create .file_btn:hover {
-  background-color: #8ca9cf;
+  background-color: #8fb3d5;
   color: white;
-  border-color: #8ca9cf;
+  border-color: #8fb3d5;
 }
 
 .review-create .file_btn:hover:active {
-  background-color: #b0c4de;
-  border-color: #b0c4de;
+  background-color: #b4cce3;
+  border-color: #b4cce3;
 }
 
 .review-create .delete .btn-del {
@@ -17407,7 +17706,7 @@ readers do not read off random characters that represent icons */
   border-radius: 50%;
   width: 140px;
   border: 2px;
-  border-color: #808080;
+  border-color: #b4cce3;
 }
 
 .review-modal .user-profile h2 {
@@ -17415,12 +17714,12 @@ readers do not read off random characters that represent icons */
 }
 
 .review-modal .fa-cog {
-  color: #808080;
+  color: #b4cce3;
   font-size: 30px;
 }
 
 .review-modal .fa-cog:hover {
-  color: #DF93E5;
+  color: #df93e5;
 }
 
 .review-modal .perfume-name h4 {
@@ -17436,8 +17735,10 @@ readers do not read off random characters that represent icons */
   font-family: "Noto Serif JP", sans-serif;
 }
 
-.review-modal .likedate i {
-  color: #DF93E5;
+.review-modal .likedate input {
+  color: #df93e5;
+  font-size: 20px;
+  border: none;
 }
 
 .review-modal .likedate p {
@@ -17468,12 +17769,12 @@ readers do not read off random characters that represent icons */
 }
 
 .user-profile-info .fa-cog {
-  color: #808080;
+  color: #b4cce3;
   font-size: 30px;
 }
 
 .user-profile-info .fa-cog:hover {
-  color: #DF93E5;
+  color: #df93e5;
 }
 
 .user-profile-info .sns {
@@ -17523,12 +17824,12 @@ readers do not read off random characters that represent icons */
 }
 
 .user-profile-edit .fa-cog {
-  color: #808080;
+  color: #b4cce3;
   font-size: 30px;
 }
 
 .user-profile-edit .fa-cog:hover {
-  color: #DF93E5;
+  color: #df93e5;
 }
 
 .user-profile-edit .sns {
@@ -17549,8 +17850,8 @@ readers do not read off random characters that represent icons */
 }
 
 .user-profile-edit .btn {
-  border-color: #DF93E5;
-  color: #DF93E5;
+  border-color: #df93e5;
+  color: #df93e5;
   font-weight: bolder;
 }
 
@@ -17562,24 +17863,24 @@ readers do not read off random characters that represent icons */
 
 .user-profile-edit .btn:hover:active {
   outline: none;
-  background-color: #DF93E5;
-  border-color: #DF93E5;
+  background-color: #df93e5;
+  border-color: #df93e5;
 }
 
 .user-profile-edit .file_btn {
-  border-color: #b0c4de;
-  color: #b0c4de;
+  border-color: #b4cce3;
+  color: #b4cce3;
 }
 
 .user-profile-edit .file_btn:hover {
-  background-color: #8ca9cf;
+  background-color: #8fb3d5;
   color: white;
-  border-color: #8ca9cf;
+  border-color: #8fb3d5;
 }
 
 .user-profile-edit .file_btn:hover:active {
-  background-color: #b0c4de;
-  border-color: #b0c4de;
+  background-color: #b4cce3;
+  border-color: #b4cce3;
 }
 
 .contact-form-head .contact-form-title {
@@ -17622,8 +17923,8 @@ readers do not read off random characters that represent icons */
 }
 
 .contact-form .btn {
-  border-color: #DF93E5;
-  color: #DF93E5;
+  border-color: #df93e5;
+  color: #df93e5;
   font-weight: bolder;
 }
 
@@ -17635,8 +17936,8 @@ readers do not read off random characters that represent icons */
 
 .contact-form .btn:hover:active {
   outline: none;
-  background-color: #DF93E5;
-  border-color: #DF93E5;
+  background-color: #df93e5;
+  border-color: #df93e5;
 }
 
 .perfume-create {
@@ -17644,8 +17945,9 @@ readers do not read off random characters that represent icons */
 }
 
 .perfume-create .btn {
-  border-color: #DF93E5;
-  color: #DF93E5;
+  border-color: #df93e5;
+  color: #df93e5;
+  font-weight: bolder;
 }
 
 .perfume-create .btn:hover {
@@ -17656,23 +17958,24 @@ readers do not read off random characters that represent icons */
 
 .perfume-create .btn:hover:active {
   outline: none;
-  background-color: #DF93E5;
+  background-color: #df93e5;
+  border-color: #df93e5;
 }
 
 .perfume-create .file_btn {
-  border-color: #b0c4de;
-  color: #b0c4de;
+  border-color: #b4cce3;
+  color: #b4cce3;
 }
 
 .perfume-create .file_btn:hover {
-  background-color: #8ca9cf;
+  background-color: #8fb3d5;
   color: white;
-  border-color: #8ca9cf;
+  border-color: #8fb3d5;
 }
 
 .perfume-create .file_btn:hover:active {
-  background-color: #b0c4de;
-  border-color: #b0c4de;
+  background-color: #b4cce3;
+  border-color: #b4cce3;
 }
 
 .perfume-create .delete .btn-del {

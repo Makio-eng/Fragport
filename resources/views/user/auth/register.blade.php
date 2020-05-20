@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">{{ __('messages.Register') }}</div>
+        <div class="card-header auth-header">{{ __('messages.Register') }}</div>
 
         <div class="card-body">
           <form method="POST" action="{{ route('user.register') }}">
@@ -62,9 +62,9 @@
             </div>
 
             <div class="form-group row mb-0">
-              <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn main-btn">
-                  {{ __('messages.Register') }}
+              <div class="col-md-6 offset-md-4 auth-btn my-1">
+                <button type="submit" class="fancy-button pop-onhover bg-gradient1">
+                  <span>{{ __('messages.Register') }}</span>
                 </button>
               </div>
             </div>

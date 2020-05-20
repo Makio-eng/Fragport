@@ -107,31 +107,10 @@
         }
     }
     .btn {
-        border-color: $main-color;
-        color: $main-color;
-        &:hover {
-            color: white;
-            background-color: lighten($main-color, 10%);
-            border-color: lighten($main-color, 10%);
-            &:active {
-                outline: none;
-                background-color: $main-color;
-            }
-        }
+        @include main-btn;
     }
     .file_btn {
-        border-color: #b0c4de;
-        color: #b0c4de;
-
-        &:hover {
-            background-color: darken(#b0c4de, 10%);
-            color: white;
-            border-color: darken(#b0c4de, 10%);
-            &:active {
-                background-color: #b0c4de;
-                border-color: #b0c4de;
-            }
-        }
+        @include sub_btn;
     }
     .delete {
         .btn-del {
@@ -187,8 +166,10 @@
         }
     }
     .likedate {
-        i {
+        input {
             color: $main-color;
+            font-size: 20px;
+            border: none;
         }
         p {
             font-size: 16px;

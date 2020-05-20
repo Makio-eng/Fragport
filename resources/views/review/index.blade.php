@@ -107,7 +107,7 @@
                       @else
                       <a href="{{action('User\ProfileController@info',['id'=>$review->user->id])}}">
                         @if(optional($review->user->profile)->userImage_path == null)
-                        <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
+                        <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
                         @else
                         <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
                         @endif</a>

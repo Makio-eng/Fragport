@@ -12,11 +12,11 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/popper.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
   <!-- Styles -->
   <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -116,10 +116,10 @@
       <div class="jumbotron-fluid">
         <div class="container">
           <div class="sns-link mb-3">
-            <a href="#" class="twitter-link"><i class="fab fa-fw fa-twitter"></i>Twitter</a><br>
-            <a href="#" class="insta-link"><i class="fab fa-fw  fa-instagram"></i>Instagram</a>
+            <a href="#" class="twitter-link text-white"><i class="fab fa-fw fa-twitter text-white"></i>Twitter</a><br>
+            <a href="#" class="insta-link text-white"><i class="fab fa-fw  fa-instagram text-white"></i>Instagram</a>
           </div>
-          <small><a href="#" class="privacy">プライバシーポリシー</a>/<a href="#" class="disclimer">免責事項</a></small><br>
+          <small><a href="{{url('/privacy')}}" class="privacy text-white">プライバシーポリシー</a>/<a href="{{url('/disclimer')}}" class="disclimer text-white">免責事項</a></small><br>
           <small>&copy;2020 Makio-eng</small>
         </div>
       </div>

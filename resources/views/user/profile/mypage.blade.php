@@ -117,9 +117,19 @@
                   </div>
                   <div class="likedate row">
                     <div class="col text-right">
-                      <i class="fas fa-heart mr-2">
-                        <p class="text-right d-inline">20</p>
-                      </i>
+                      @if(!$review->is_favorite($review->id))
+                      <form action="{{ action('FavoriteController@store',['id'=>$review->id]) }}" method="post">
+                        <input type="submit" value="&#xf004;" class="far">
+                        <p class="text-right d-inline">{{count($review->favorites)}}</p>
+                        @csrf
+                      </form>
+                      @else
+                      <form action="{{ action('FavoriteController@destroy',['id'=>$review->id]) }}" method="post">
+                        <input type="submit" value="&#xf004;" class="fas">
+                        <p class="text-right d-inline">{{count($review->favorites)}}</p>
+                        @csrf
+                      </form>
+                      @endif
                       <i class="far fa-clock">
                         <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
                       </i>

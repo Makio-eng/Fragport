@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">{{ __('messages.Login') }}</div>
+        <div class="card-header auth-header">{{ __('messages.Login') }}</div>
 
         <div class="card-body">
           <form method="POST" action="{{ route('user.login') }}">
@@ -52,10 +52,17 @@
             </div>
 
             <div class="form-group row mb-0">
-              <div class="col-md-8 offset-md-4">
-                <button type="submit" class="btn main-btn">
-                  {{ __('messages.Login') }}
+              <div class="col-md-8 offset-md-4 my-1 auth-btn">
+                <button type="submit" class="fancy-button pop-onhover bg-gradient1">
+                  <span>{{ __('messages.Login') }}</span>
                 </button>
+              </div>
+              <div class="">
+                @if (Route::has('password.request'))
+                <a href="{{route('password.request')}}" class="btn btn-link">
+                  {{__('Forgot Your Password?')}}
+                </a>
+                @endif
               </div>
             </div>
           </form>

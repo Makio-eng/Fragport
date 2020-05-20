@@ -36,6 +36,8 @@ Route::group(['prefix' => '/'], function () {
   Route::get('about', 'HomeController@about');
   Route::get('information', 'HomeController@information');
   Route::get('search', 'HomeController@search');
+  Route::get('privacy', 'HomeController@privacy');
+  Route::get('disclimer', 'HomeController@disclimer');
 });
 
 //ブランド関連
