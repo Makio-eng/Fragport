@@ -31,4 +31,9 @@
     .btn {
         @include main-btn;
     }
+    .back-btn {
+        .btn {
+            @include sub-btn;
+        }
+    }
 }

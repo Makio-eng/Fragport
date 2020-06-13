@@ -1,6 +1,120 @@
-.about{
-    .about-title {
-        @include title-font;
+//コンテナ
+.about-contents {
+    font-family: $main-font;
+    p {
+        font-size: 16px;
     }
-    
+
+    ///モヤモヤ
+    .box {
+        width: 100%;
+        height: 300px;
+        background: lighten($sub-color, 10%);
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .wave {
+        opacity: 0.4;
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        background: #0af;
+        width: 600px;
+        height: 600px;
+        margin-left: -300px;
+        margin-top: -300px;
+        transform-origin: 50% 48%;
+        border-radius: 43%;
+        animation: drift 6000ms infinite linear;
+    }
+
+    .wave.-three {
+        animation: drift 8000ms infinite linear;
+    }
+
+    .wave.-two {
+        animation: drift 10000ms infinite linear;
+        opacity: 0.1;
+        background: yellow;
+    }
+
+    .box:after {
+        content: "";
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to bottom,
+            rgba($main-color, 1),
+            rgba($sub-color, 0) 80%,
+            rgba(white, 0.5)
+        );
+        z-index: 11;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .title {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        line-height: 300px;
+        text-align: center;
+        transform: translate3d(0, 0, 0);
+        color: white;
+        font-family: palatino;
+        letter-spacing: 0.4em;
+        font-size: 24px;
+        text-shadow: 0 1px 0 rgba(black, 0.1);
+        text-indent: 0.3em;
+    }
+    @keyframes drift {
+        from {
+            transform: rotate(0deg);
+        }
+        from {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* 「RightToLeft」の動作内容 */
+    @keyframes RightToLeft {
+        0% {
+            opacity: 0; /* 透明 */
+            transform: translate(50px); /* X軸方向に50px */
+        }
+        100% {
+            opacity: 1; /* 不透明 */
+            transform: translateX(0);
+        }
+    }
+
+    /* 「RightToLeft」を適用する箇所 */
+    .head {
+        animation-duration: 2s; /* アニメーション時間 */
+        animation-name: RightToLeft; /* アニメーション名 */
+    }
+
+    .fadein-left {
+        -webkit-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+        -webkit-transform: translateX(-50px);
+        -moz-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    .fadein-left.active {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

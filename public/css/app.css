@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Noto+Serif+JP);*:focus {
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Noto+Serif+JP);@charset "UTF-8";
+
+*:focus {
   outline: none !important;
 }
 
@@ -17226,7 +17228,6 @@ button:active {
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #b4cce3;
   text-align: center;
 }
 
@@ -17288,15 +17289,15 @@ button:active {
   transform: translate(-50%, -50%);
 }
 
-.about-link {
+.about-link .d-flex {
   background-color: #fff5fd;
 }
 
-.about-link h2 {
+.about-link .d-flex h2 {
   font-family: palatino;
 }
 
-.about-link h2 span {
+.about-link .d-flex h2 span {
   font-family: palatino;
   color: #df93e5;
 }
@@ -17345,6 +17346,11 @@ button:active {
   font-family: "Noto Serif JP", sans-serif;
 }
 
+.contact-form-link {
+  background-color: #fff5fd;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
 .search-result {
   font-family: "Noto Serif JP", sans-serif;
 }
@@ -17388,6 +17394,7 @@ button:active {
   text-transform: uppercase;
   color: #ffffff;
   position: relative;
+  background-color: white;
 }
 
 .fancy-button:before {
@@ -17487,9 +17494,150 @@ button:active {
   font-size: 16px;
 }
 
-.about .about-title {
+.about-contents {
   font-family: "Noto Serif JP", sans-serif;
-  color: black;
+  /* 「RightToLeft」の動作内容 */
+  /* 「RightToLeft」を適用する箇所 */
+}
+
+.about-contents p {
+  font-size: 16px;
+}
+
+.about-contents .box {
+  width: 100%;
+  height: 300px;
+  background: #d9e5f1;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.about-contents .wave {
+  opacity: 0.4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #0af;
+  width: 600px;
+  height: 600px;
+  margin-left: -300px;
+  margin-top: -300px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  -webkit-animation: drift 6000ms infinite linear;
+          animation: drift 6000ms infinite linear;
+}
+
+.about-contents .wave.-three {
+  -webkit-animation: drift 8000ms infinite linear;
+          animation: drift 8000ms infinite linear;
+}
+
+.about-contents .wave.-two {
+  -webkit-animation: drift 10000ms infinite linear;
+          animation: drift 10000ms infinite linear;
+  opacity: 0.1;
+  background: yellow;
+}
+
+.about-contents .box:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #df93e5, rgba(180, 204, 227, 0) 80%, rgba(255, 255, 255, 0.5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+.about-contents .title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  font-family: palatino;
+  letter-spacing: 0.4em;
+  font-size: 24px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-indent: 0.3em;
+}
+
+@-webkit-keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    /* 透明 */
+    transform: translate(50px);
+    /* X軸方向に50px */
+  }
+
+  100% {
+    opacity: 1;
+    /* 不透明 */
+    transform: translateX(0);
+  }
+}
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    /* 透明 */
+    transform: translate(50px);
+    /* X軸方向に50px */
+  }
+
+  100% {
+    opacity: 1;
+    /* 不透明 */
+    transform: translateX(0);
+  }
+}
+
+.about-contents .head {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /* アニメーション時間 */
+  -webkit-animation-name: RightToLeft;
+          animation-name: RightToLeft;
+  /* アニメーション名 */
+}
+
+.about-contents .fadein-left {
+  transition: all 1s linear;
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.about-contents .fadein-left.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .brandlist-title {
@@ -17591,6 +17739,10 @@ button:active {
 }
 
 .review-list-title h2 {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.review-list-title p {
   font-family: "Noto Serif JP", sans-serif;
 }
 
@@ -17938,6 +18090,22 @@ button:active {
   outline: none;
   background-color: #df93e5;
   border-color: #df93e5;
+}
+
+.contact-form .back-btn .btn {
+  border-color: #b4cce3;
+  color: #b4cce3;
+}
+
+.contact-form .back-btn .btn:hover {
+  background-color: #8fb3d5;
+  color: white;
+  border-color: #8fb3d5;
+}
+
+.contact-form .back-btn .btn:hover:active {
+  background-color: #b4cce3;
+  border-color: #b4cce3;
 }
 
 .perfume-create {

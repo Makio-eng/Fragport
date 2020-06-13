@@ -24,8 +24,8 @@
         <p class="mb-0">お問い合わせ内容</p>
         <p>{{$contact->body}}</p>
       </div>
-      <div class="row pt-3">
-        <input class="btn btn-lg btn-secondary mx-auto" type="submit" name="action" value="戻る">
+      <div class="row pt-3 back-btn">
+        <input class="btn btn-lg mx-auto" type="submit" name="action" value="戻る">
       </div>
       <div class="row py-3">
         <input class="btn btn-lg mx-auto" type="submit" name="action" value="送信">

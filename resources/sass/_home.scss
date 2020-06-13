@@ -23,12 +23,14 @@
     }
 }
 .about-link {
-    background-color: #fff5fd;
-    h2 {
-        font-family: palatino;
-        span {
+    .d-flex {
+        background-color: #fff5fd;
+        h2 {
             font-family: palatino;
-            color: $main-color;
+            span {
+                font-family: palatino;
+                color: $main-color;
+            }
         }
     }
 }
@@ -71,6 +73,11 @@
             font-family: $main-font;
         }
     }
+}
+
+.contact-form-link {
+    background-color: #fff5fd;
+    font-family: $main-font;
 }
 
 .search-result {
