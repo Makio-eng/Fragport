@@ -13,15 +13,6 @@ Fragport は、比較的高価格帯でなかなか店頭ではお目にかか�
 
 <h2>:computer:主な機能</h2>
 
-### 管理者
-
-<li>香水ブランド登録</li>
-<li>インフォメーション投稿</li>
-<li>お問い合わせ返信 etc..</li>
-見た目はだいぶ簡素に作りました。。
-<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/admin.png" width="800"></p>
-<br>
-
 ### ユーザー
 
 <li>新規香水登録</li>
@@ -29,6 +20,15 @@ Fragport は、比較的高価格帯でなかなか店頭ではお目にかか�
 <li>検索機能</li>
 <li>いいね機能 etc...</li>
 <p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/edit.png" width="800"></p>
+<br>
+
+### 管理者
+
+<li>香水ブランド登録</li>
+<li>インフォメーション投稿</li>
+<li>お問い合わせ返信 etc..</li>
+見た目はだいぶ簡素に作りました。。
+<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/admin.png" width="800"></p>
 <br>
 
 <h2>:wrench:開発環境</h2>
