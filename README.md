@@ -19,6 +19,7 @@ Fragport は、比較的高価格帯でなかなか店頭ではお目にかか�
 <li>香水レビュー投稿</li>
 <li>検索機能</li>
 <li>いいね機能 etc...</li>
+<br>
 <p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/edit.png" width="800"></p>
 <br>
 
@@ -28,6 +29,7 @@ Fragport は、比較的高価格帯でなかなか店頭ではお目にかか�
 <li>インフォメーション投稿</li>
 <li>お問い合わせ返信 etc..</li>
 見た目はだいぶ簡素に作りました。。
+<br>
 <p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/admin.png" width="800"></p>
 <br>
 
