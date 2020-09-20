@@ -31,7 +31,7 @@
 
 <body>
   <div id="app">
-    <header class="admin-header bg-danger">
+    <header class="admin-header bg-success">
       <div class="jumbotron-fluid">
         <div class="container-fluid">
           <div class="navbar row p-0">
@@ -109,7 +109,7 @@
     <main class="py-4">
       @yield('content')
     </main>
-    <footer class="admin-footer bg-info">
+    <footer class="admin-footer bg-success">
       <div class="jumbotron-fluid">
         <div class="container py-3">
           <div class="row">
