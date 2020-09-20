@@ -30,7 +30,7 @@
     <div class="row d-flex align-items-center">
       <div class="col-md-6 order-md-2">
         <p class="m-1">
-          そこで、皆さんが持っているそれらの香水の情報を集約し、誰もが手軽に楽しめる香水図鑑サイトを一緒に創りませんか？<br>
+          そこで、皆さんが持っている香水の情報を集約し、誰もが手軽に楽しめる香水図鑑サイトを一緒に創りませんか？<br>
           Fragportは、香水好きな人たちで創り上げる香りのSNSです。
         </p>
       </div>
