@@ -1,14 +1,14 @@
-<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/about04.jpeg" width="400"></p>
+<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/about04.jpeg" width="600"></p>
 
-<h1 align="center"><b> About <font color="#df93e5">Fragport</font></h1>
+<h1 align="center"><b> About <font color="pink">Fragport</font></h1>
 
 Fragport は、比較的高価格帯でなかなか店頭ではお目にかかれない香水の情報をユーザーの投稿から情報共有していく、香水 wiki のような SNS サービスです。
 <br>
 <br>
 
-<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/fpmaingif.gif" width="400"></p>
+<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/fpmaingif.gif" width="700"></p>
 <br>
-<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/fpabout.gif" width="400"></p>
+<p align="center"><img src="https://github.com/Makio-eng/Fragport/blob/master/fpabout.gif" width="700"></p>
 <br>
 
 <h2>:computer:主な機能</h2>
