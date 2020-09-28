@@ -13,7 +13,7 @@
       <h2 class=" mx-auto">about<br><span class="fragport">Fragport</span></h2>
     </div>
     <div class="col-8 px-0"><a href="{{url('/about')}}" class="">
-        <img src="{{asset('storage/materials/about_01.jpeg')}}" alt="" class="img-fluid">
+        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/about_01.jpeg" alt="" class="img-fluid">
       </a>
     </div>
   </div>
@@ -49,7 +49,7 @@
       @foreach($reviews as $review)
       <div class="col-4 py-2">
         <a href="{{ action('ReviewController@index',['id'=>$review->perfume_id]) }}" class="">
-          <img src="{{ asset('storage/images/'. $review->reviewThumb_path)}}" class="img-fluid d-block mx-auto mb-2">
+          <img src="{{$review->reviewThumb_path}}" class="img-fluid d-block mx-auto mb-2">
         </a>
       </div>
       @endforeach
@@ -66,7 +66,7 @@
 
       <div class="brand col-4">
         <a href="{{ action('BrandController@info',['id' => $brand -> id])}}" class="brand-link">
-          <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid brand-logo d-block mx-auto mb-2">
+          <img src="{{$brand -> brandLogo_path}}" class="img-fluid brand-logo d-block mx-auto mb-2">
         </a>
         <p class="text-center">({{$brand -> ja_name}})</p>
       </div>
@@ -81,7 +81,7 @@
 <div class="container contact-form-link">
   <div class="row shadow d-flex align-items-center">
     <div class="col-8 px-0">
-      <a href="{{url('/contact')}}"><img src="{{asset('storage/materials/contact_01.jpeg')}}" alt="" class="img-fluid"></a>
+      <a href="{{url('/contact')}}"><img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/contact_01.jpeg" alt="" class="img-fluid"></a>
     </div>
     <div class="col-4">
       <h2 class="text-center">Contact<br>Form</h2>

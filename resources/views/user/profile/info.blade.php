@@ -8,9 +8,9 @@
     <div class="col-sm-5">
       <div class="row">
         @if(optional($user->profile)->userImage_path == null)
-        <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
+        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
         @else
-        <img src="{{ asset('storage/images/'. $user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+        <img src="{{$user->profile->userImage_path}}" alt="" class="img-fluid user-image mx-auto">
         @endif
       </div>
       <div class="row">
@@ -19,17 +19,17 @@
       <div class="row pt-3 pb-5 text-center">
         <div class="sns col-4">
           <a href="{{optional($user->profile)->twitter}}" class="Twitter-link">
-            <img src="{{ asset('storage/materials/Twitter.png') }}" class="Twitter-logo img-fluid sns-links ">
+            <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/Twitter.png" class="Twitter-logo img-fluid sns-links ">
           </a>
         </div>
         <div class="sns col-4">
           <a href="{{optional($user->profile)->instagram}}" class="instagram-link">
-            <img src="{{ asset('storage/materials/instagram2.png') }}" class="instagram-logo img-fluid sns-links ">
+            <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/instagram2.png" class="instagram-logo img-fluid sns-links ">
           </a>
         </div>
         <div class="sns col-4">
           <a href="{{optional($user->profile)->facebook}}" class="facebook-link">
-            <img src="{{ asset('storage/materials/facebook.png') }}" class="facebook-logo img-fluid sns-links ">
+            <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/facebook.png" class="facebook-logo img-fluid sns-links ">
           </a>
         </div>
 
@@ -71,7 +71,7 @@
     @foreach($user->reviews as $review)
     <div class="col-4 py-lg-2">
       <a class="review-link" data-toggle="modal" data-target="#exampleModalCenter{{$review->id}}">
-        <img src="{{asset('storage/images/'.$review->reviewThumb_path)}}" alt="" class="img-fluid d-block mx-auto my-3 ">
+        <img src="{{$review->reviewThumb_path}}" alt="" class="img-fluid d-block mx-auto my-3 ">
       </a>
     </div>
     <!-- modal -->
@@ -88,15 +88,15 @@
 
               <div class="row pb-3">
                 <div class="col-lg-7">
-                  <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+                  <img src="{{$review->reviewImage_path}}" alt="" class="img-fluid d-block mx-auto my-4 ">
                 </div>
                 <div class="col-lg-5">
                   <div class="user-profile row">
                     <div class="col-3">
                       @if(optional($review->user->profile)->userImage_path == null)
-                      <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
+                      <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
                       @else
-                      <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+                      <img src="{{$review->user->profile->userImage_path}}" alt="" class="img-fluid user-image mx-auto">
                       @endif
                     </div>
                     <div class="col-9 d-flex align-items-center">
@@ -119,9 +119,6 @@
                         @csrf
                       </form>
                       @endif
-                      <i class="far fa-clock">
-                        <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
-                      </i>
                     </div>
                   </div>
 
@@ -136,6 +133,12 @@
                       {{$review->body}}
                     </p>
                   </div>
+                  <div class="likedate row">
+                    <i class="far fa-clock ml-auto">
+                      <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
+                    </i>
+                  </div>
+
                 </div>
               </div>
             </div>

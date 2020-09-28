@@ -26,7 +26,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -57,7 +57,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -88,7 +88,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -119,7 +119,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -150,7 +150,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -181,7 +181,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -213,7 +213,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -245,7 +245,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -277,7 +277,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>
@@ -309,7 +309,7 @@
             <div class="brand col-4 py-3">
               <div class="row px-3">
                 <a href="{{action ('Admin\BrandController@info',['id' => $brand->id])}}" class="brand-link">
-                  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
+                  <img src="{{$brand -> brandLogo_path}}" class="img-fluid  brand-logo d-block mx-auto mb-2">
                 </a>
               </div>
               <p class="text-center">( {{$brand -> ja_name}} )</p>

@@ -22,7 +22,7 @@
         </p>
       </div>
       <div class="col-md-6 order-md-1">
-        <img src="{{asset('storage/materials/about04.jpeg')}}" alt="" class="img-fluid">
+        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/about04.jpeg" alt="" class="img-fluid">
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="col-md-6">
-        <img src="{{asset('storage/materials/about05.jpeg')}}" alt="" class="img-fluid">
+        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/about05.jpeg" alt="" class="img-fluid">
       </div>
     </div>
   </div>

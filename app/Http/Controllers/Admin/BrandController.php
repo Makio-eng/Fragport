@@ -8,7 +8,7 @@ use App\Models\Brand;
 use App\Models\Perfume;
 use App\Http\Requests\BrandRequest;
 use Illuminate\Support\Facades\Auth;
-
+use Storage;
 
 class BrandController extends Controller
 {
@@ -40,8 +40,10 @@ class BrandController extends Controller
     $brands = new Brand;
     $form = $request->all();
     $brands->admin_id = Auth::id();
-    $path = $request->file('brandLogo')->store('public/images');
-    $brands->brandLogo_path = basename($path);
+    // $path = $request->file('brandLogo')->store('public/images');
+    // $brands->brandLogo_path = basename($path);
+    $path = Storage::disk('s3')->putFile('/public/images', $form['brandLogo'], 'public');
+    $brands->brandLogo_path = Storage::disk('s3')->url($path);
     unset($form['_token']);
     unset($form['brandLogo']);
     $brands->fill($form);
@@ -62,8 +64,10 @@ class BrandController extends Controller
     $brand = Brand::find($request->id);
     $form = $request->all();
     if (isset($form['brandLogo'])) {
-      $path = $request->file('brandLogo')->store('public/images');
-      $brand->brandLogo_path = basename($path);
+      // $path = $request->file('brandLogo')->store('public/images');
+      // $brand->brandLogo_path = basename($path);
+      $path = Storage::disk('s3')->putFile('/public/images', $form['brandLogo'], 'public');
+      $brand->brandLogo_path = Storage::disk('s3')->url($path);
       unset($form['brandLogo']);
     } else {
       $form['brandLogo_path'] = $brand->brandLogo_path;

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Profile;
 use App\Models\User;
 use App\Http\Requests\ProfileRequest;
-
+use Storage;
 
 class ProfileController extends Controller
 {
@@ -53,8 +53,11 @@ class ProfileController extends Controller
     if ($request->remove == 'true') {
       $form['userImage_path'] = null;
     } elseif ($request->file('userImage')) {
-      $path = $request->file('userImage')->store('public/images');
-      $form['userImage_path'] = basename($path);
+      // $path = $request->file('userImage')->store('public/images');
+      // $form['userImage_path'] = basename($path);
+      $path = Storage::disk('s3')->putFile('/public/images', $form['userImage'], 'public');
+      $profile->userImage_path = Storage::disk('s3')->url($path);
+
       //} else {
       //$form['userImage_path'] = $profile->userImage_path;
     }

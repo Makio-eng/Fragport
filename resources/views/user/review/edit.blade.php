@@ -37,9 +37,9 @@
         <div class="user-profile row">
           <div class="col-3">
             @if(optional(Auth::user()->profile)->userImage_path == null)
-            <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid mx-auto">
+            <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/user-icon.png" alt=" no_image" class="img-fluid mx-auto">
             @else
-            <img src="{{ asset('storage/images/'. Auth::user()->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+            <img src="{{ Auth::user()->profile->userImage_path}}" alt="" class="img-fluid user-image mx-auto">
             @endif
 
           </div>

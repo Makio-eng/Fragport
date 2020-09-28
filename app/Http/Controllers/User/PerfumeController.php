@@ -9,7 +9,7 @@ use App\Models\Brand;
 use App\Http\Requests\PerfumeRequest;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
-
+use Storage;
 
 class PerfumeController extends Controller
 {
@@ -31,13 +31,20 @@ class PerfumeController extends Controller
     $perfumes->brand_id = $request->id;
 
     if (isset($form['perfumeImage'])) {
-      $path = $request->file('perfumeImage')->store('public/images');
-      $perfumes->perfumeImage_path = basename($path);
+      // $path = $request->file('perfumeImage')->store('public/images');
+      // $perfumes->perfumeImage_path = basename($path);
+      $path = Storage::disk('s3')->putFile('/public/images', $form['perfumeImage'], 'public');
+      $perfumes->perfumeImage_path = Storage::disk('s3')->url($path);
 
       $perfumeThumb = $request->file('perfumeImage');
-      $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
-      Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
-      $perfumes->perfumeThumb_path = $thumb_path;
+      // $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
+      // Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      // $perfumes->perfumeThumb_path = $thumb_path;
+      $extension = $request->file('perfumeImage')->getClientOriginalExtension();
+      $thumbName = str_random(20) . '.' . $extension;
+      $resize_img = Image::make($perfumeThumb)->fit(400, 400)->encode($extension);
+      Storage::disk('s3')->put('/public/images/' . $thumbName, (string) $resize_img, 'public');
+      $perfumes->perfumeThumb_path = Storage::disk('s3')->url('/public/images/' . $thumbName);
     } else {
       $perfumes->perfumeImage_path = null;
       $perfumes->perfumeThumb_path = null;
@@ -78,13 +85,20 @@ class PerfumeController extends Controller
     $form = $request->all();
 
     if (isset($form['perfumeImage'])) {
-      $path = $request->file('perfumeImage')->store('public/images');
-      $perfume->perfumeImage_path = basename($path);
+      // $path = $request->file('perfumeImage')->store('public/images');
+      // $perfume->perfumeImage_path = basename($path);
+      $path = Storage::disk('s3')->putFile('/public/images', $form['perfumeImage'], 'public');
+      $perfume->perfumeImage_path = Storage::disk('s3')->url($path);
 
       $perfumeThumb = $request->file('perfumeImage');
-      $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
-      Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
-      $perfume->perfumeThumb_path = $thumb_path;
+      // $thumb_path = str_random(20) . '.' . $perfumeThumb->getClientOriginalExtension();
+      // Image::make($perfumeThumb)->fit(400, 400)->save(public_path('storage/images/' . $thumb_path));
+      // $perfume->perfumeThumb_path = $thumb_path;
+      $extension = $request->file('perfumeImage')->getClientOriginalExtension();
+      $thumbName = str_random(20) . '.' . $extension;
+      $resize_img = Image::make($perfumeThumb)->fit(400, 400)->encode($extension);
+      Storage::disk('s3')->put('/public/images/' . $thumbName, (string) $resize_img, 'public');
+      $perfume->perfumeThumb_path = Storage::disk('s3')->url('/public/images/' . $thumbName);
 
       unset($form['perfumeImage']);
     } else {

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container-fluid terms">
-  <div class="col-8 offset-2">
+  <div class="col-10 offset-1">
     <h2 class="text-center mb-4">プライバシーポリシー</h2>
     <p>Fragport（以下，「当サービス」といいます。）は，本ウェブサイト上における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。</p>
 

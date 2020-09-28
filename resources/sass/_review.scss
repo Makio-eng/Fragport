@@ -20,7 +20,11 @@
     }
     .perfume {
         .perfume-about {
-            font-family: $main-font;
+            p {
+                font-family: $main-font;
+                font-size: 16px;
+                white-space: pre-wrap;
+            }
         }
         .perfume-detail {
             p {
@@ -166,6 +170,7 @@
         .body {
             font-size: 16px;
             font-family: $main-font;
+            white-space: pre-wrap;
         }
     }
     .likedate {
@@ -173,6 +178,7 @@
             color: $main-color;
             font-size: 20px;
             border: none;
+            background-color: white;
         }
         p {
             font-size: 16px;

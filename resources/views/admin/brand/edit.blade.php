@@ -3,7 +3,7 @@
 @section('content')
 <div class="information-create container">
   <h1 class="text-center">ブランド編集</h1>
-  <img src="{{asset('storage/images/' . $brand -> brandLogo_path)}}" alt="" class="img-fluid">
+  <img src="{{$brand -> brandLogo_path}}" alt="" class="img-fluid">
   <form action="{{ action('Admin\BrandController@update')}}" method="post" enctype="multipart/form-data">
     @if (count($errors) > 0)
     <ul>

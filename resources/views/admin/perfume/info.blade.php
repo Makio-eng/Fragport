@@ -14,7 +14,7 @@
       @if($perfume->perfumeImage_path == null)
       <img src="/storage/images/noimage.png" alt="no_image" class="img-fluid mx-auto">
       @else
-      <img src="{{ asset('storage/images/'. $perfume -> perfumeImage_path) }}" alt="{{ $perfume -> ja_name}}" class="img-fluid mx-auto">
+      <img src="{{$perfume -> perfumeImage_path}}" alt="{{ $perfume -> ja_name}}" class="img-fluid mx-auto">
       @endif
     </div>
     <div class="col-md-5 mx-2">
@@ -62,7 +62,7 @@
     @foreach($perfume->reviews as $review)
     <div class="col-4 py-lg-2">
       <a class="review-link" data-toggle="modal" data-target="#exampleModalCenter{{$review->id}}">
-        <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+        <img src="{{$review->reviewImage_path}}" alt="" class="img-fluid d-block mx-auto my-4 ">
       </a>
     </div>
     <!-- Modal -->
@@ -73,7 +73,7 @@
             <div class="container-fluid">
               <div class="row py-3">
                 <div class="col-lg-7">
-                  <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+                  <img src="{{$review->reviewImage_path}}" alt="" class="img-fluid d-block mx-auto my-4 ">
                 </div>
                 <div class="col-lg-5">
                   <div class="user-profile row">
@@ -81,7 +81,7 @@
                       @if(optional($review->user->profile)->userImage_path == null)
                       <img src="/storage/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
                       @else
-                      <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+                      <img src="{{ $review->user->profile->userImage_path }}" alt="" class="img-fluid user-image mx-auto">
                       @endif
                     </div>
                     <div class="col-8 d-flex align-items-center">

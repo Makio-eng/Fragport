@@ -2,7 +2,8 @@
 @section('content')
 <div class="perfumeindex-header container">
   <div class="perfume-name row d-block text-center mb-4">
-    <h1 class="mx-auto mb-0">{{ $perfume -> name}}<br>({{ $perfume -> ja_name}})</h1>
+    <h1 class="mx-auto mb-0">{{ $perfume -> name}}</h1>
+    <h3 class="mx-auto mb-0">({{ $perfume -> ja_name}})</h3>
   </div>
 
   @unless(Auth::guest())
@@ -18,16 +19,14 @@
   <div class="perfume row">
     <div class="col-md-6 perfume-image py-2">
       @if($perfume->perfumeImage_path == null)
-      <img src="{{ asset('storage/materials/noimage.png') }}" alt="no_image" class="img-fluid mx-auto">
+      <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/noimage.png" alt="no_image" class="img-fluid mx-auto">
       @else
-      <img src="{{ asset('storage/images/'. $perfume -> perfumeImage_path) }}" alt="{{ $perfume -> ja_name}}" class="img-fluid mx-auto">
+      <img src="{{$perfume -> perfumeImage_path}}" alt="{{ $perfume -> ja_name}}" class="img-fluid mx-auto">
       @endif
     </div>
     <div class="col-md-5 mx-2">
       <div class="row perfume-about mx-auto py-2">
-        <h4 class="mx-auto">
-          {{ $perfume -> body}}
-        </h4>
+        <p class="mx-auto">{{ $perfume -> body}}</p>
       </div>
       <div class="perfume-detail">
         <div class="perfume-rate d-block row">
@@ -72,7 +71,7 @@
     @foreach($perfume->reviews as $review)
     <div class="col-4 py-lg-2 review-link">
       <a data-toggle="modal" data-target="#exampleModalCenter{{$review->id}}">
-        <img src="{{asset('storage/images/'.$review->reviewThumb_path)}}" alt="" class="img-fluid d-block mx-auto my-3">
+        <img src="{{$review->reviewThumb_path}}" alt="" class="img-fluid d-block mx-auto my-3">
       </a>
     </div>
 
@@ -92,7 +91,7 @@
 
               <div class="row pb-3">
                 <div class="col-lg-7">
-                  <img src="{{asset('storage/images/'.$review->reviewImage_path)}}" alt="" class="img-fluid d-block mx-auto my-4 ">
+                  <img src="{{$review->reviewImage_path}}" alt="" class="img-fluid d-block mx-auto my-4 ">
                 </div>
                 <div class="col-lg-5">
                   <div class="user-profile row">
@@ -100,17 +99,17 @@
                       @if(Auth::id() == $review->user_id)
                       <a href="{{action('User\ProfileController@mypage')}}">
                         @if(optional($review->user->profile)->userImage_path == null)
-                        <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
+                        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
                         @else
-                        <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+                        <img src="{{$review->user->profile->userImage_path}}" alt="" class="img-fluid user-image mx-auto">
                         @endif</a>
 
                       @else
                       <a href="{{action('User\ProfileController@info',['id'=>$review->user->id])}}">
                         @if(optional($review->user->profile)->userImage_path == null)
-                        <img src="{{ asset('storage/materials/user-icon.png') }}" alt=" no_image" class="img-fluid user-image mx-auto">
+                        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/user-icon.png" alt=" no_image" class="img-fluid user-image mx-auto">
                         @else
-                        <img src="{{ asset('storage/images/'. $review->user->profile->userImage_path) }}" alt="" class="img-fluid user-image mx-auto">
+                        <img src="{{$review->user->profile->userImage_path}}" alt="" class="img-fluid user-image mx-auto">
                         @endif</a>
                       @endif
                     </div>
@@ -133,17 +132,18 @@
                         @csrf
                       </form>
                       @endif
-                      <i class="far fa-clock">
-                        <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
-                      </i>
                     </div>
                   </div>
 
                   <div class="row review-body">
-                    <p class="body">
-                      {{$review->body}}
-                    </p>
+                    <p class="body">{{$review->body}}</p>
                   </div>
+                  <div class="likedate row">
+                    <i class="far fa-clock ml-auto">
+                      <p class="text-right d-inline">{{$review->created_at->format('Y/m/d')}}</p>
+                    </i>
+                  </div>
+
                 </div>
               </div>
             </div>

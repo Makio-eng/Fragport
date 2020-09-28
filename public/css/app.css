@@ -17271,7 +17271,7 @@ button:active {
 }
 
 .top-image {
-  background-image: url(/images/head_03.jpeg?602949e1cdc01a7640a93cdf865e9438);
+  background-image: url("https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/head_03.jpeg");
   background-size: cover;
   width: 100%;
   padding-top: 35%;
@@ -17670,12 +17670,16 @@ button:active {
 
 .brand-info .brand-logo p {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .brand-info .brandabout {
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.brand-info .brandabout p {
+  white-space: pre-wrap;
 }
 
 .brand-info hr {
@@ -17722,8 +17726,10 @@ button:active {
   background-color: #df93e5;
 }
 
-.perfumeindex-header .perfume .perfume-about {
+.perfumeindex-header .perfume .perfume-about p {
   font-family: "Noto Serif JP", sans-serif;
+  font-size: 16px;
+  white-space: pre-wrap;
 }
 
 .perfumeindex-header .perfume .perfume-detail p {
@@ -17885,12 +17891,14 @@ button:active {
 .review-modal .review-body .body {
   font-size: 16px;
   font-family: "Noto Serif JP", sans-serif;
+  white-space: pre-wrap;
 }
 
 .review-modal .likedate input {
   color: #df93e5;
   font-size: 20px;
   border: none;
+  background-color: white;
 }
 
 .review-modal .likedate p {
@@ -17938,7 +17946,8 @@ button:active {
 }
 
 .user-profile-info .users p {
-  font-size: 20px;
+  font-size: 16px;
+  white-space: pre-wrap;
 }
 
 .user-profile-info .cp_hr06 {

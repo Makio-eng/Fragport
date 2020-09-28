@@ -15,11 +15,11 @@
 
     <div class="form-group align-items-center mx-auto">
       <label for="name" class="">香水名</label>
-      <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
+      <input type="text" class="form-control" id="name" placeholder="例）SANCTI" name="name" value="{{old('name')}}">
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="ja_name" class="">読み方</label>
-      <input type="text" class="form-control" id="ja_name" name="ja_name" value="{{old('ja_name')}}">
+      <input type="text" class="form-control" id="ja_name" placeholder="例）サンクティ" name="ja_name" value="{{old('ja_name')}}">
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="rate" class="">賦香率</label>
@@ -33,19 +33,19 @@
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="note" class="">香調</label>
-      <input type="text" class="form-control" id="note" name="note" value="{{old('note')}}">
+      <input type="text" class="form-control" id="note" placeholder="例）オリエンタル" name="note" value="{{old('note')}}">
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="materials" class="">香料</label>
-      <input type="text" class="form-control" id="materials" name="materials" value="{{old('materials')}}">
+      <input type="text" class="form-control" id="materials" placeholder="例）ベルガモット、マンダリン、グレープフルーツ、サイプレス etc." name="materials" value="{{old('materials')}}">
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="perfumer" class="">調香師</label>
-      <input type="text" class="form-control" id="perfumer" name="perfumer" value="{{old('perfumer')}}">
+      <input type="text" class="form-control" id="perfumer" placeholder="例）ソニア コンスタント" name="perfumer" value="{{old('perfumer')}}">
     </div>
     <div class="form-group align-items-center mx-auto">
       <label for="body" class="">説明</label>
-      <textarea id="body" class="form-control" name="body" rows="15">{{old('body')}}</textarea>
+      <textarea id="body" class="form-control" placeholder="例）神聖な矛と貴い楯が液体になったような香り。この聖なる水は、教会の礼拝儀式を彷彿とさせるモダンなインセンスであり、フレッシュグリーンな香りを帯びて、気持ちを鼓舞する。" name="body" rows="15">{{old('body')}}</textarea>
     </div>
 
     <div id="file-preview" class="container">
