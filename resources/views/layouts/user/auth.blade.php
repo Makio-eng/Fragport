@@ -34,19 +34,18 @@
     <header class="header">
       <div class="jumbotron-fluid">
         <div class="container-fluid">
-          <div class="navbar-menu row py-o">
-            <nav class="navbar navbar-expand navbar-light w-100 py-0 px-4">
-              <a class="navbar-brand ml-3" href="{{ url('/') }}">{{ config('app.name', 'Fragport') }}</a>
+          <div class="navbar-menu row py-0">
+            <nav class="navbar navbar-expand navbar-light w-100 py-0 px-1">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar ml-auto my-0 py-0">
                   <!-- Authentication Links -->
                   @unless (Auth::guard('user')->check())
                   <div class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('user.login') }}">{{ __('messages.Login') }}</a>
+                    <a class="nav-link text-white pb-0" href="{{ route('user.login') }}">{{ __('messages.Login') }}</a>
                   </div>
                   @if (Route::has('user.register'))
                   <div class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('user.register') }}">{{ __('messages.Register') }}</a>
+                    <a class="nav-link text-white pb-0" href="{{ route('user.register') }}">{{ __('messages.Register') }}</a>
                   </div>
                   @endif
                   @else
@@ -69,6 +68,9 @@
                   @endunless
                 </ul>
               </div>
+          </div>
+          <div class="row ml-3">
+            <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Fragport') }}</a>
           </div>
           </nav>
         </div>
