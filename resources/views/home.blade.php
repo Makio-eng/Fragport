@@ -7,7 +7,7 @@
   <h2 class="top-text">「あなたの香りを<br>　綴りませんか」</h2>
 </div>
 
-<div class="container about-link my-4">
+<div class="container about-link my-4 px-4">
   <div class="row shadow">
     <div class="col-4 text-center d-flex align-items-center">
       <h2 class=" mx-auto">about<br><span class="fragport">Fragport</span></h2>
@@ -18,6 +18,7 @@
     </div>
   </div>
 </div>
+
 <!-- インフォメーション関連 -->
 <div class="container">
   <div class="information container my-5 shadow">
@@ -78,13 +79,13 @@
   </div>
 </div>
 
-<div class="container contact-form-link">
-  <div class="row shadow d-flex align-items-center">
+<div class="container contact-form-link px-4">
+  <div class="row shadow">
     <div class="col-8 px-0">
       <a href="{{url('/contact')}}"><img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/contact_01.jpeg" alt="" class="img-fluid"></a>
     </div>
-    <div class="col-4">
-      <h2 class="text-center">Contact<br>Form</h2>
+    <div class="col-4 d-flex align-items-center">
+      <h3 class="text-center mx-auto">Contact<br>Form</h3>
     </div>
   </div>
 </div>

@@ -17346,7 +17346,7 @@ button:active {
   font-family: "Noto Serif JP", sans-serif;
 }
 
-.contact-form-link {
+.contact-form-link .d-flex {
   background-color: #fff5fd;
   font-family: "Noto Serif JP", sans-serif;
 }
