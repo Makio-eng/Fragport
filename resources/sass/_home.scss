@@ -23,6 +23,10 @@
     }
 }
 .about-link {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
     .d-flex {
         background-color: #fff5fd;
         h2 {
@@ -76,6 +80,10 @@
 }
 
 .contact-form-link {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
     .d-flex {
         background-color: #fff5fd;
         font-family: $main-font;

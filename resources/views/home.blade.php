@@ -8,15 +8,18 @@
 </div>
 
 <div class="container about-link my-4 px-4">
-  <div class="row shadow">
-    <div class="col-4 text-center d-flex align-items-center">
-      <h2 class=" mx-auto">about<br><span class="fragport">Fragport</span></h2>
-    </div>
-    <div class="col-8 px-0"><a href="{{url('/about')}}" class="">
+  <a href="{{url('/about')}}" class="">
+
+    <div class="row shadow">
+      <div class="col-4 text-center d-flex align-items-center">
+        <h2 class=" mx-auto">about<br><span class="fragport">Fragport</span></h2>
+      </div>
+      <div class="col-8 px-0">
         <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/about_01.jpeg" alt="" class="img-fluid">
-      </a>
+      </div>
+
     </div>
-  </div>
+  </a>
 </div>
 
 <!-- インフォメーション関連 -->
@@ -80,13 +83,15 @@
 </div>
 
 <div class="container contact-form-link px-4">
-  <div class="row shadow">
-    <div class="col-8 px-0">
-      <a href="{{url('/contact')}}"><img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/contact_01.jpeg" alt="" class="img-fluid"></a>
+  <a href="{{url('/contact')}}">
+    <div class="row shadow">
+      <div class="col-8 px-0">
+        <img src="https://fragport-image.s3-ap-northeast-1.amazonaws.com/uploads/contact_01.jpeg" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 d-flex align-items-center">
+        <h3 class="text-center mx-auto">Contact<br>Form</h3>
+      </div>
     </div>
-    <div class="col-4 d-flex align-items-center">
-      <h3 class="text-center mx-auto">Contact<br>Form</h3>
-    </div>
-  </div>
+  </a>
 </div>
 @endsection

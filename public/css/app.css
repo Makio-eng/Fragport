@@ -17289,6 +17289,11 @@ button:active {
   transform: translate(-50%, -50%);
 }
 
+.about-link a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .about-link .d-flex {
   background-color: #fff5fd;
 }
@@ -17344,6 +17349,11 @@ button:active {
 .brandlist .brand p {
   font-size: 16px;
   font-family: "Noto Serif JP", sans-serif;
+}
+
+.contact-form-link a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-form-link .d-flex {
