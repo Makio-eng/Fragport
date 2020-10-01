@@ -53,6 +53,12 @@
     font-family: $main-font;
     a {
         font-size: 16px;
+        font-family: $main-font;
+        color: black;
+        &:hover {
+            text-decoration: none;
+            color: darken($main-color, 5%);
+        }
     }
 }
 .contents-logo {

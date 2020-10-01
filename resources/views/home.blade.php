@@ -35,7 +35,9 @@
         <p class="text-center border-bottom w-md-50 mx-auto">{{$information->created_at->format('Y/m/d')}}</p>
       </div>
       <div class="col-8">
-        <p class="information-link b-line">{{$information->title}}</p>
+        <a class="title" href="{{ url('/information') }}">
+          <p class="information-link b-line">{{$information->title}}</p>
+        </a>
       </div>
     </div>
     @endforeach
