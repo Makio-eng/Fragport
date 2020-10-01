@@ -89,7 +89,7 @@
           <label for="input-my-fragramce" class="text-center  mb-2">
             <h3>マイフレグランス</h3>
           </label>
-          <input type="text" class="form-control form-control-sm" name="myFragrance" id="input-my-fragrance" placeholder="例）トムフォード「ネロリ ポルトフィーノ」" value="{{ optional($user->profile)->myFragrance}}">
+          <input type="text" class="form-control form-control-sm" name="myFragrance" id="input-my-fragrance" placeholder="例）トムフォード『ネロリ ポルトフィーノ』" value="{{ optional($user->profile)->myFragrance}}">
         </div>
         <div class="form-group align-items-center mx-auto py-3">
           <label for="input-introduction" class="text-center  mb-2">

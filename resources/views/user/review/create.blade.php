@@ -50,7 +50,7 @@
             <h3 class="user-name">{{Auth::user()->name}}</h3>
           </div>
         </div>
-        <div class="review-body row py-2">
+        <div class="review-body row p-2">
           <textarea class="form-control" name="body" rows="10">{{ old('body') }}</textarea>
         </div>
       </div>
